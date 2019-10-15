@@ -6736,6 +6736,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 17:37:25.256 [http-nio-8089-exec-2] INFO  m.w.n.config.application.NBSession - update session for id:[09a6b33c-e665-4bd7-b7f9-2fb465c5e189], at [2019-10-15T17:37:25.256] by url:[http://localhost:8089/] with ip:[0:0:0:0:0:0:0:1] 
 17:37:25.522 [http-nio-8089-exec-10] INFO  m.w.n.config.application.NBSession - update session for id:[09a6b33c-e665-4bd7-b7f9-2fb465c5e189], at [2019-10-15T17:37:25.522] by url:[http://localhost:8089/next] with ip:[0:0:0:0:0:0:0:1] 
 17:37:25.545 [http-nio-8089-exec-8] INFO  m.w.n.config.application.NBSession - update session for id:[09a6b33c-e665-4bd7-b7f9-2fb465c5e189], at [2019-10-15T17:37:25.545] by url:[http://localhost:8089/upfiles/img/2019-10-15/63bc2fc3-bb9d-4468-b603-43b07cb54aac.jpg] with ip:[0:0:0:0:0:0:0:1] 
+<<<<<<< HEAD
 19:53:58.253 [restartedMain] INFO  m.w.n.NoteBlogV4Application - Starting NoteBlogV4Application on Wangzejun with PID 8900 (E:\git_newportal_workspace\noteblogv4\target\classes started by wangzejun in E:\git_newportal_workspace\noteblogv4) 
 19:53:58.255 [restartedMain] INFO  m.w.n.NoteBlogV4Application - The following profiles are active: noteblogv4 
 19:53:58.354 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7fb4fe49: startup date [Tue Oct 15 19:53:58 CST 2019]; root of context hierarchy 
@@ -8830,3 +8831,5 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 20:14:47.644 [http-nio-8089-exec-10] INFO  m.w.n.c.permission.NBAuthAspect - 请求资源：[http://localhost:8089/management/dashboard]，验证权限中，需要权限：[management:index:dashboard]... 
 20:14:47.647 [http-nio-8089-exec-10] INFO  m.w.n.c.permission.NBAuthAspect - 验证权限通过，放行... 
 20:14:47.665 [http-nio-8089-exec-10] INFO  m.w.n.config.application.NBSession - update session for id:[09a6b33c-e665-4bd7-b7f9-2fb465c5e189], at [2019-10-15T20:14:47.665] by url:[http://localhost:8089/management/dashboard] with ip:[0:0:0:0:0:0:0:1] 
+=======
+>>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5

@@ -26,6 +26,27 @@ import me.wuwenbin.noteblogv4.model.entity.permission.NBSysMenu;
 import me.wuwenbin.noteblogv4.model.entity.permission.NBSysMenu.MenuType;
 import me.wuwenbin.noteblogv4.model.entity.permission.NBSysResource;
 import me.wuwenbin.noteblogv4.model.entity.permission.NBSysRole;
+<<<<<<< HEAD
+=======
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.ApplicationListener;
+import org.springframework.core.annotation.Order;
+import org.springframework.core.env.Environment;
+import org.springframework.data.domain.Example;
+import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
+
+import java.util.Optional;
+
+import static me.wuwenbin.noteblogv4.model.constant.NoteBlogV4.Init.INIT_NOT;
+import static me.wuwenbin.noteblogv4.model.constant.NoteBlogV4.Init.INIT_STATUS;
+import static me.wuwenbin.noteblogv4.model.entity.permission.NBSysMenu.MenuType.LEAF;
+import static me.wuwenbin.noteblogv4.model.entity.permission.NBSysMenu.MenuType.PARENT;
+>>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
 
 /**
  * created by Wuwenbin on 2018/8/1 at 20:25
@@ -35,9 +56,17 @@ import me.wuwenbin.noteblogv4.model.entity.permission.NBSysRole;
 @Component
 @Order(2)
 @Slf4j
+<<<<<<< HEAD
 public class MenuListener implements ApplicationListener<ApplicationReadyEvent>
 {
     
+=======
+public class MenuListener implements ApplicationListener<ApplicationReadyEvent> {
+    
+    // 日志对象
+    private static Logger log = LoggerFactory.getLogger(MenuListener.class);
+
+>>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
     private final MenuRepository menuRepository;
     
     private final RoleRepository roleRepository;

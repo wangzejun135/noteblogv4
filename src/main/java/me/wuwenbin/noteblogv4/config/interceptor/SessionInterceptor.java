@@ -14,6 +14,17 @@ import me.wuwenbin.noteblogv4.model.constant.NoteBlogV4;
 import me.wuwenbin.noteblogv4.model.entity.permission.NBSysUser;
 import me.wuwenbin.noteblogv4.util.CookieUtils;
 import me.wuwenbin.noteblogv4.util.NBUtils;
+<<<<<<< HEAD
+=======
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+>>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
 
 /**
  * 拦截器更多的是为了处理Session和Cookie的一些逻辑 created by Wuwenbin on 2018/1/23 at 13:36
@@ -24,6 +35,12 @@ import me.wuwenbin.noteblogv4.util.NBUtils;
 public class SessionInterceptor extends HandlerInterceptorAdapter
 {
     
+<<<<<<< HEAD
+=======
+    // 日志对象
+    private static Logger log = LoggerFactory.getLogger(SessionInterceptor.class);
+    
+>>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
     private UserRepository userRepository = NBUtils.getBean(UserRepository.class);
     
     private NBContext blogContext;

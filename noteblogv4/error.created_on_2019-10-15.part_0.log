@@ -2144,6 +2144,7 @@ Caused by: java.lang.Error: Unresolved compilation problem:
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:170)
 	... 25 common frames omitted
+<<<<<<< HEAD
 19:54:07.628 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'initListener' defined in file [E:\git_newportal_workspace\noteblogv4\target\classes\me\wuwenbin\noteblogv4\config\listener\InitListener.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [me.wuwenbin.noteblogv4.config.listener.InitListener]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
 	The method builder() is undefined for the type NBSysRole
@@ -2219,3 +2220,5 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:170)
 	... 25 common frames omitted
+=======
+>>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5

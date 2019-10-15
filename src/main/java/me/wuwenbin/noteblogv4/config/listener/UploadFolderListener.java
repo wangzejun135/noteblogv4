@@ -1,7 +1,19 @@
 package me.wuwenbin.noteblogv4.config.listener;
 
+<<<<<<< HEAD
 import java.io.File;
 
+=======
+import lombok.extern.slf4j.Slf4j;
+import me.wuwenbin.noteblogv4.dao.repository.ParamRepository;
+import me.wuwenbin.noteblogv4.exception.UploadPathMissException;
+import me.wuwenbin.noteblogv4.model.constant.NoteBlogV4;
+import me.wuwenbin.noteblogv4.model.constant.Upload;
+import me.wuwenbin.noteblogv4.model.entity.NBParam;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+>>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
@@ -10,12 +22,16 @@ import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
+<<<<<<< HEAD
 import lombok.extern.slf4j.Slf4j;
 import me.wuwenbin.noteblogv4.dao.repository.ParamRepository;
 import me.wuwenbin.noteblogv4.exception.UploadPathMissException;
 import me.wuwenbin.noteblogv4.model.constant.NoteBlogV4;
 import me.wuwenbin.noteblogv4.model.constant.Upload;
 import me.wuwenbin.noteblogv4.model.entity.NBParam;
+=======
+import java.io.File;
+>>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
 
 /**
  * created by Wuwenbin on 2018/8/3 at 22:46
@@ -28,6 +44,12 @@ import me.wuwenbin.noteblogv4.model.entity.NBParam;
 public class UploadFolderListener implements ApplicationListener<ApplicationReadyEvent>
 {
     
+<<<<<<< HEAD
+=======
+    // 日志对象
+    private static Logger log = LoggerFactory.getLogger(UploadFolderListener.class);
+    
+>>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
     private final ParamRepository paramRepository;
     
     private final Environment env;

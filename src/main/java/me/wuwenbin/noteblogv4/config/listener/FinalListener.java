@@ -1,5 +1,13 @@
 package me.wuwenbin.noteblogv4.config.listener;
 
+<<<<<<< HEAD
+=======
+import lombok.extern.slf4j.Slf4j;
+import me.wuwenbin.noteblogv4.config.permission.NBAuthAspect;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+>>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.core.annotation.Order;
@@ -18,6 +26,12 @@ import lombok.extern.slf4j.Slf4j;
 public class FinalListener implements ApplicationListener<ApplicationReadyEvent>
 {
     
+<<<<<<< HEAD
+=======
+    // 日志对象
+    private static Logger log = LoggerFactory.getLogger(FinalListener.class);
+    
+>>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
     @Override
     public void onApplicationEvent(ApplicationReadyEvent event)
     {

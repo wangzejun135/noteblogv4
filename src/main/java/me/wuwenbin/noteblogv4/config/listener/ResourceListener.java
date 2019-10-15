@@ -1,5 +1,6 @@
 package me.wuwenbin.noteblogv4.config.listener;
 
+<<<<<<< HEAD
 import static me.wuwenbin.noteblogv4.model.constant.NoteBlogV4.Init.INIT_NOT;
 import static me.wuwenbin.noteblogv4.model.constant.NoteBlogV4.Init.INIT_STATUS;
 
@@ -9,6 +10,19 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+=======
+import cn.hutool.core.map.MapUtil;
+import lombok.extern.slf4j.Slf4j;
+import me.wuwenbin.noteblogv4.config.application.NBContext;
+import me.wuwenbin.noteblogv4.config.permission.NBAuth;
+import me.wuwenbin.noteblogv4.dao.repository.ParamRepository;
+import me.wuwenbin.noteblogv4.model.constant.NoteBlogV4;
+import me.wuwenbin.noteblogv4.model.entity.NBParam;
+import me.wuwenbin.noteblogv4.model.entity.permission.NBSysResource;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+>>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
 import org.springframework.aop.framework.AopProxyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
@@ -36,9 +50,17 @@ import me.wuwenbin.noteblogv4.model.entity.permission.NBSysResource;
  */
 @Slf4j
 @Component
+<<<<<<< HEAD
 public class ResourceListener implements ApplicationListener<ContextRefreshedEvent>
 {
     
+=======
+public class ResourceListener implements ApplicationListener<ContextRefreshedEvent> {
+    
+    // 日志对象
+    private static Logger log = LoggerFactory.getLogger(ResourceListener.class);
+
+>>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
     private final NBContext context;
     
     private final ParamRepository paramRepository;

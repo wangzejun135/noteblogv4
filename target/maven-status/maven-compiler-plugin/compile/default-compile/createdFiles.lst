@@ -79,6 +79,7 @@ me\wuwenbin\noteblogv4\model\entity\permission\NBSysMenu.class
 me\wuwenbin\noteblogv4\service\login\QqLoginServiceImpl.class
 me\wuwenbin\noteblogv4\model\pojo\business\IpInfo$IpInfoBuilder.class
 me\wuwenbin\noteblogv4\web\management\settings\SettingsController.class
+me\wuwenbin\noteblogv4\model\constant\LayUploader.class
 me\wuwenbin\noteblogv4\model\strategy\NBArticleStrategy.class
 me\wuwenbin\noteblogv4\dao\repository\TagRepository.class
 me\wuwenbin\noteblogv4\model\entity\NBFunction.class
@@ -164,6 +165,7 @@ me\wuwenbin\noteblogv4\service\content\ArticleServiceImpl.class
 me\wuwenbin\noteblogv4\service\users\UsersServiceImpl.class
 me\wuwenbin\noteblogv4\web\InitController.class
 me\wuwenbin\noteblogv4\model\pojo\vo\NBTagVO.class
+me\wuwenbin\noteblogv4\service\upload\LocalUploadServiceImpl.class
 me\wuwenbin\noteblogv4\model\entity\permission\pk\RoleResourceKey.class
 me\wuwenbin\noteblogv4\config\application\SessionValidator.class
 me\wuwenbin\noteblogv4\model\entity\NBCate$NBCateBuilder.class
@@ -189,6 +191,7 @@ me\wuwenbin\noteblogv4\config\listener\MenuListener.class
 me\wuwenbin\noteblogv4\model\entity\NBTagRefer.class
 me\wuwenbin\noteblogv4\model\entity\NBFunction$NBFunctionBuilder.class
 me\wuwenbin\noteblogv4\dao\repository\ProjectRepository.class
+me\wuwenbin\noteblogv4\service\upload\QiniuUploadServiceImpl.class
 me\wuwenbin\noteblogv4\config\permission\NBAuthAspect.class
 me\wuwenbin\noteblogv4\model\pojo\bo\ArticleQueryBO.class
 me\wuwenbin\noteblogv4\model\pojo\bo\MessageQueryBO.class

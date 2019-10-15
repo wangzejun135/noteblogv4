@@ -105,6 +105,28 @@ import me.wuwenbin.noteblogv4.model.entity.permission.NBSysResource;
 import me.wuwenbin.noteblogv4.model.entity.permission.NBSysRole;
 import me.wuwenbin.noteblogv4.model.entity.permission.NBSysRoleResource;
 import me.wuwenbin.noteblogv4.model.entity.permission.pk.RoleResourceKey;
+<<<<<<< HEAD
+=======
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.ApplicationListener;
+import org.springframework.core.annotation.Order;
+import org.springframework.data.domain.Example;
+import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+
+import static me.wuwenbin.noteblogv4.model.constant.NoteBlogV4.Init.INIT_STATUS;
+import static me.wuwenbin.noteblogv4.model.constant.NoteBlogV4.Init.*;
+import static me.wuwenbin.noteblogv4.model.constant.NoteBlogV4.Param.*;
+>>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
 
 /**
  * spring boot 容器启动完成之后 创建完表之后，插入一些初始值 created by Wuwenbin on 2018/7/15 at 17:14
@@ -114,9 +136,17 @@ import me.wuwenbin.noteblogv4.model.entity.permission.pk.RoleResourceKey;
 @Slf4j
 @Component
 @Order(1)
+<<<<<<< HEAD
 public class InitListener implements ApplicationListener<ApplicationReadyEvent>
 {
     
+=======
+public class InitListener implements ApplicationListener<ApplicationReadyEvent> {
+    
+    // 日志对象
+    private static Logger log = LoggerFactory.getLogger(InitListener.class);
+
+>>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
     private final ParamRepository paramRepository;
     
     private final RoleRepository roleRepository;
