@@ -16,6 +16,8 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -38,6 +40,9 @@ import java.util.stream.Collectors;
 @Aspect
 @Component
 public class NBAuthAspect extends BaseController {
+    
+    // 日志对象
+    private static Logger log = LoggerFactory.getLogger(NBAuthAspect.class);
 
     private final ResourceRepository resourceRepository;
 

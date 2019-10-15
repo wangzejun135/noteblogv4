@@ -6,6 +6,9 @@ import me.wuwenbin.noteblogv4.dao.repository.CateRepository;
 import me.wuwenbin.noteblogv4.exception.InitException;
 import me.wuwenbin.noteblogv4.model.entity.NBArticle;
 import me.wuwenbin.noteblogv4.model.entity.NBCate;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
@@ -23,6 +26,9 @@ import java.time.LocalDateTime;
 @Component
 @Order(4)
 public class HelloWorldListener implements ApplicationListener<ApplicationReadyEvent> {
+    
+    // 日志对象
+    private static Logger log = LoggerFactory.getLogger(HelloWorldListener.class);
 
     private final CateRepository cateRepository;
     private final ArticleRepository articleRepository;

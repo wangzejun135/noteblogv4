@@ -8,6 +8,9 @@ import me.wuwenbin.noteblogv4.dao.repository.ParamRepository;
 import me.wuwenbin.noteblogv4.model.constant.NoteBlogV4;
 import me.wuwenbin.noteblogv4.model.entity.NBParam;
 import me.wuwenbin.noteblogv4.model.entity.permission.NBSysResource;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.aop.framework.AopProxyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
@@ -38,6 +41,9 @@ import static me.wuwenbin.noteblogv4.model.constant.NoteBlogV4.Init.INIT_STATUS;
 @Slf4j
 @Component
 public class ResourceListener implements ApplicationListener<ContextRefreshedEvent> {
+    
+    // 日志对象
+    private static Logger log = LoggerFactory.getLogger(ResourceListener.class);
 
     private final NBContext context;
     private final ParamRepository paramRepository;

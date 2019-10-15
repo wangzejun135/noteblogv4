@@ -21,6 +21,11 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class NBSysResource implements Serializable {
 
+    /**
+     * 序列化
+     */
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false, length = 11)
@@ -40,6 +45,92 @@ public class NBSysResource implements Serializable {
 
     @Column(name = "[group]")
     private String group;
+    
+    
+
+    public Long getId()
+    {
+        return id;
+    }
+
+
+
+    public String getUrl()
+    {
+        return url;
+    }
+
+
+
+    public String getName()
+    {
+        return name;
+    }
+
+
+
+    public String getPermission()
+    {
+        return permission;
+    }
+
+
+
+    public ResType getType()
+    {
+        return type;
+    }
+
+
+
+    public String getGroup()
+    {
+        return group;
+    }
+
+
+
+    public void setId(Long id)
+    {
+        this.id = id;
+    }
+
+
+
+    public void setUrl(String url)
+    {
+        this.url = url;
+    }
+
+
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+
+
+    public void setPermission(String permission)
+    {
+        this.permission = permission;
+    }
+
+
+
+    public void setType(ResType type)
+    {
+        this.type = type;
+    }
+
+
+
+    public void setGroup(String group)
+    {
+        this.group = group;
+    }
+
+
 
     /**
      * url的类型

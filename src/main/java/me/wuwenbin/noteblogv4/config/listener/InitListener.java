@@ -12,6 +12,9 @@ import me.wuwenbin.noteblogv4.model.entity.permission.NBSysResource;
 import me.wuwenbin.noteblogv4.model.entity.permission.NBSysRole;
 import me.wuwenbin.noteblogv4.model.entity.permission.NBSysRoleResource;
 import me.wuwenbin.noteblogv4.model.entity.permission.pk.RoleResourceKey;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
@@ -40,6 +43,9 @@ import static me.wuwenbin.noteblogv4.model.constant.NoteBlogV4.Param.*;
 @Component
 @Order(1)
 public class InitListener implements ApplicationListener<ApplicationReadyEvent> {
+    
+    // 日志对象
+    private static Logger log = LoggerFactory.getLogger(InitListener.class);
 
     private final ParamRepository paramRepository;
     private final RoleRepository roleRepository;

@@ -16,10 +16,36 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class QqLoginModel implements Serializable {
-
+public class QqLoginModel implements Serializable
+{
+    
+    /**
+     * 序列化
+     */
+    private static final long serialVersionUID = 1L;
+    
     private String callbackDomain;
+    
     private String code;
-
-
+    
+    public String getCallbackDomain()
+    {
+        return callbackDomain;
+    }
+    
+    public String getCode()
+    {
+        return code;
+    }
+    
+    public void setCallbackDomain(String callbackDomain)
+    {
+        this.callbackDomain = callbackDomain;
+    }
+    
+    public void setCode(String code)
+    {
+        this.code = code;
+    }
+    
 }

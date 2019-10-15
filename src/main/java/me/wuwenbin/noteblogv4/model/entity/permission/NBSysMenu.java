@@ -25,6 +25,11 @@ import java.io.Serializable;
 @JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"})
 public class NBSysMenu implements Serializable {
 
+    /**
+     * 序列化
+     */
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false, length = 11)
@@ -59,6 +64,148 @@ public class NBSysMenu implements Serializable {
     @OneToOne(cascade = CascadeType.DETACH)
     @JoinColumn(name = "resource_id")
     private NBSysResource resource;
+    
+    
+
+    public Long getId()
+    {
+        return id;
+    }
+
+
+
+    public Long getParentId()
+    {
+        return parentId;
+    }
+
+
+
+    public String getName()
+    {
+        return name;
+    }
+
+
+
+    public String getIcon()
+    {
+        return icon;
+    }
+
+
+
+    public MenuType getType()
+    {
+        return type;
+    }
+
+
+
+    public Long getRoleId()
+    {
+        return roleId;
+    }
+
+
+
+    public Boolean getEnable()
+    {
+        return enable;
+    }
+
+
+
+    public String getRemark()
+    {
+        return remark;
+    }
+
+
+
+    public Integer getOrderIndex()
+    {
+        return orderIndex;
+    }
+
+
+
+    public NBSysResource getResource()
+    {
+        return resource;
+    }
+
+
+
+    public void setId(Long id)
+    {
+        this.id = id;
+    }
+
+
+
+    public void setParentId(Long parentId)
+    {
+        this.parentId = parentId;
+    }
+
+
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+
+
+    public void setIcon(String icon)
+    {
+        this.icon = icon;
+    }
+
+
+
+    public void setType(MenuType type)
+    {
+        this.type = type;
+    }
+
+
+
+    public void setRoleId(Long roleId)
+    {
+        this.roleId = roleId;
+    }
+
+
+
+    public void setEnable(Boolean enable)
+    {
+        this.enable = enable;
+    }
+
+
+
+    public void setRemark(String remark)
+    {
+        this.remark = remark;
+    }
+
+
+
+    public void setOrderIndex(Integer orderIndex)
+    {
+        this.orderIndex = orderIndex;
+    }
+
+
+
+    public void setResource(NBSysResource resource)
+    {
+        this.resource = resource;
+    }
+
+
 
     /**
      * 菜单类型

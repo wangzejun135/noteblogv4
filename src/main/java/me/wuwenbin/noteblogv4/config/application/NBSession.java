@@ -9,6 +9,9 @@ import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import me.wuwenbin.noteblogv4.model.entity.permission.NBSysUser;
 import me.wuwenbin.noteblogv4.util.NBUtils;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -29,6 +32,14 @@ import static java.time.LocalDateTime.now;
 @AllArgsConstructor
 @NoArgsConstructor
 public class NBSession implements Serializable {
+    
+    /**
+     * 序列化
+     */
+    private static final long serialVersionUID = 1L;
+
+    // 日志对象
+    private static Logger log = LoggerFactory.getLogger(NBSession.class);
 
     @Builder.Default
     private String id = IdUtil.randomUUID();
@@ -44,6 +55,84 @@ public class NBSession implements Serializable {
     @Builder.Default
     private boolean expired = FALSE;
     private NBSysUser sessionUser;
+    
+    
+
+    public String getId()
+    {
+        return id;
+    }
+
+    public String getHost()
+    {
+        return host;
+    }
+
+    public LocalDateTime getStartTimestamp()
+    {
+        return startTimestamp;
+    }
+
+    public LocalDateTime getLastAccessTime()
+    {
+        return lastAccessTime;
+    }
+
+    public long getTimeout()
+    {
+        return timeout;
+    }
+
+    public LocalDateTime getExpireTimestamp()
+    {
+        return expireTimestamp;
+    }
+
+    public NBSysUser getSessionUser()
+    {
+        return sessionUser;
+    }
+
+    public void setId(String id)
+    {
+        this.id = id;
+    }
+
+    public void setHost(String host)
+    {
+        this.host = host;
+    }
+
+    public void setStartTimestamp(LocalDateTime startTimestamp)
+    {
+        this.startTimestamp = startTimestamp;
+    }
+
+    public void setLastAccessTime(LocalDateTime lastAccessTime)
+    {
+        this.lastAccessTime = lastAccessTime;
+    }
+
+    public void setTimeout(long timeout)
+    {
+        this.timeout = timeout;
+    }
+
+    public void setExpireTimestamp(LocalDateTime expireTimestamp)
+    {
+        this.expireTimestamp = expireTimestamp;
+    }
+
+    public void setExpired(boolean expired)
+    {
+        this.expired = expired;
+    }
+
+    public void setSessionUser(NBSysUser sessionUser)
+    {
+        this.sessionUser = sessionUser;
+    }
+
 
     public static final long DEFAULT_TIMEOUT_MILLS = 30 * 60 * 1000;
 

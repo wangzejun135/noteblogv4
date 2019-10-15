@@ -19,6 +19,36 @@ public class IpInfo implements Serializable {
 
     private int code;
     private Info data;
+    
+    
+
+    public int getCode()
+    {
+        return code;
+    }
+
+
+
+    public Info getData()
+    {
+        return data;
+    }
+
+
+
+    public void setCode(int code)
+    {
+        this.code = code;
+    }
+
+
+
+    public void setData(Info data)
+    {
+        this.data = data;
+    }
+
+
 
     @Data
     @Builder

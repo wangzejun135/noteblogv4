@@ -6,6 +6,9 @@ import me.wuwenbin.noteblogv4.exception.UploadPathMissException;
 import me.wuwenbin.noteblogv4.model.constant.NoteBlogV4;
 import me.wuwenbin.noteblogv4.model.constant.Upload;
 import me.wuwenbin.noteblogv4.model.entity.NBParam;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
@@ -16,63 +19,84 @@ import org.springframework.util.StringUtils;
 
 import java.io.File;
 
-
 /**
  * created by Wuwenbin on 2018/8/3 at 22:46
+ * 
  * @author wuwenbin
  */
 @Slf4j
 @Component
 @Order(3)
-public class UploadFolderListener implements ApplicationListener<ApplicationReadyEvent> {
-
+public class UploadFolderListener implements ApplicationListener<ApplicationReadyEvent>
+{
+    
+    // 日志对象
+    private static Logger log = LoggerFactory.getLogger(UploadFolderListener.class);
+    
     private final ParamRepository paramRepository;
+    
     private final Environment env;
-
+    
     @Autowired
-    public UploadFolderListener(ParamRepository paramRepository, Environment env) {
+    public UploadFolderListener(ParamRepository paramRepository, Environment env)
+    {
         this.paramRepository = paramRepository;
         this.env = env;
     }
-
+    
     @Override
-    public void onApplicationEvent(ApplicationReadyEvent event) {
+    public void onApplicationEvent(ApplicationReadyEvent event)
+    {
         initUploadFolder();
     }
-
+    
     /**
      * 初始化上传文件夹
      *
      * @throws Exception
      */
-    private void initUploadFolder() {
+    private void initUploadFolder()
+    {
         NBParam param = paramRepository.findByName(NoteBlogV4.Param.UPLOAD_TYPE);
         String value = param.getValue();
-        if (Upload.Method.LOCAL.name().equalsIgnoreCase(value)) {
+        if (Upload.Method.LOCAL.name().equalsIgnoreCase(value))
+        {
             String uploadPathKey = "noteblog.upload.path";
             String path = env.getProperty(uploadPathKey);
-            if (!StringUtils.isEmpty(path)) {
+            if (!StringUtils.isEmpty(path))
+            {
                 log.info("「个人博客」APP 文件上传路径设置为：[{}]", path);
                 path = path.replace("file:", "");
                 File filePath = new File(path + "file/");
                 File imgPath = new File(path + "img/");
                 boolean f = false, i = false;
-                if (!filePath.exists() && !filePath.isDirectory()) {
+                if (!filePath.exists() && !filePath.isDirectory())
+                {
                     f = filePath.mkdirs();
                 }
-                if (!imgPath.exists() && !imgPath.isDirectory()) {
+                if (!imgPath.exists() && !imgPath.isDirectory())
+                {
                     i = imgPath.mkdirs();
                 }
-                if (f && i) {
+                if (f && i)
+                {
                     log.info("「个人博客」APP 成功创建上传文件夹目录：[{}] 和 [{}]", path + "file/", path + "img/");
-                } else if (f) {
+                }
+                else if (f)
+                {
                     log.info("「个人博客」APP 目录 [{}] 已存在上传文件夹或创建失败", path + "img/");
-                } else if (i) {
+                }
+                else if (i)
+                {
                     log.info("「个人博客」APP 目录 [{}] 已存在上传文件夹或创建失败", path + "file/");
-                } else {
+                }
+                else
+                {
                     log.info("「个人博客」APP 已存在上传文件夹！");
                 }
-            } else {
+            }
+            else
+            {
                 log.error("上传路径未正确设置");
                 throw new UploadPathMissException("上传路径未正确设置！");
             }

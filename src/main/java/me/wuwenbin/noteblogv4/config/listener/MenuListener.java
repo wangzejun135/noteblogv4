@@ -10,6 +10,9 @@ import me.wuwenbin.noteblogv4.model.entity.permission.NBSysMenu;
 import me.wuwenbin.noteblogv4.model.entity.permission.NBSysMenu.MenuType;
 import me.wuwenbin.noteblogv4.model.entity.permission.NBSysResource;
 import me.wuwenbin.noteblogv4.model.entity.permission.NBSysRole;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
@@ -35,6 +38,9 @@ import static me.wuwenbin.noteblogv4.model.entity.permission.NBSysMenu.MenuType.
 @Order(2)
 @Slf4j
 public class MenuListener implements ApplicationListener<ApplicationReadyEvent> {
+    
+    // 日志对象
+    private static Logger log = LoggerFactory.getLogger(MenuListener.class);
 
     private final MenuRepository menuRepository;
     private final RoleRepository roleRepository;
