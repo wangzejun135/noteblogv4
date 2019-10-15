@@ -8,23 +8,105 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * layuiXtree树对象
- * created by Wuwenbin on 2018/7/23 at 16:55
+ * layuiXtree树对象 created by Wuwenbin on 2018/7/23 at 16:55
  *
  * @author wuwenbin
  */
 @Data
-public class LayuiXTree implements Serializable {
-
+public class LayuiXTree implements Serializable
+{
+    
+    /**
+     * 序列化
+     */
+    private static final long serialVersionUID = 1L;
+    
     private String id;
+    
     private String title;
+    
     private String value;
+    
     private String parentId;
+    
     private Boolean checked;
+    
     private Boolean disabled;
+    
     private List<LayuiXTree> data = new ArrayList<>();
-
-    public LayuiXTree(String title, String value, String id, boolean checked, boolean disabled) {
+    
+    public String getId()
+    {
+        return id;
+    }
+    
+    public String getTitle()
+    {
+        return title;
+    }
+    
+    public String getValue()
+    {
+        return value;
+    }
+    
+    public String getParentId()
+    {
+        return parentId;
+    }
+    
+    public Boolean getChecked()
+    {
+        return checked;
+    }
+    
+    public Boolean getDisabled()
+    {
+        return disabled;
+    }
+    
+    public List<LayuiXTree> getData()
+    {
+        return data;
+    }
+    
+    public void setId(String id)
+    {
+        this.id = id;
+    }
+    
+    public void setTitle(String title)
+    {
+        this.title = title;
+    }
+    
+    public void setValue(String value)
+    {
+        this.value = value;
+    }
+    
+    public void setParentId(String parentId)
+    {
+        this.parentId = parentId;
+    }
+    
+    public void setChecked(Boolean checked)
+    {
+        this.checked = checked;
+    }
+    
+    public void setDisabled(Boolean disabled)
+    {
+        this.disabled = disabled;
+    }
+    
+    public void setData(List<LayuiXTree> data)
+    {
+        this.data = data;
+    }
+    
+    public LayuiXTree(String title, String value, String id, boolean checked, boolean disabled)
+    {
         this.title = title;
         this.value = value;
         this.id = id;
@@ -32,8 +114,9 @@ public class LayuiXTree implements Serializable {
         this.disabled = disabled;
         this.parentId = getPid(id);
     }
-
-    private LayuiXTree(String id, String parentId) {
+    
+    private LayuiXTree(String id, String parentId)
+    {
         this.title = id;
         this.value = "";
         this.id = id;
@@ -41,26 +124,36 @@ public class LayuiXTree implements Serializable {
         this.disabled = false;
         this.parentId = parentId;
     }
-
-
-    private static String getPid(String gp) {
-        if (StringUtils.isEmpty(gp)) {
+    
+    private static String getPid(String gp)
+    {
+        if (StringUtils.isEmpty(gp))
+        {
             throw new IllegalArgumentException("title 字段不能为空！");
-        } else {
+        }
+        else
+        {
             String[] groupArray = gp.split(":");
             int length = groupArray.length;
-            if (length == 1) {
+            if (length == 1)
+            {
                 return "root";
-            } else {
+            }
+            else
+            {
                 return gp.substring(0, gp.lastIndexOf(":"));
             }
         }
     }
-
-    private static LayuiXTree findChildren(LayuiXTree treeNode, List<LayuiXTree> treeNodes) {
-        for (LayuiXTree it : treeNodes) {
-            if (treeNode.getId().equals(it.getParentId())) {
-                if (treeNode.getData() == null) {
+    
+    private static LayuiXTree findChildren(LayuiXTree treeNode, List<LayuiXTree> treeNodes)
+    {
+        for (LayuiXTree it : treeNodes)
+        {
+            if (treeNode.getId().equals(it.getParentId()))
+            {
+                if (treeNode.getData() == null)
+                {
                     treeNode.setData(new ArrayList<>());
                 }
                 treeNode.getData().add(findChildren(it, treeNodes));
@@ -68,32 +161,37 @@ public class LayuiXTree implements Serializable {
         }
         return treeNode;
     }
-
+    
     /**
      * 使用递归方法建树
      *
      * @param treeNodes
      * @return
      */
-    public static List<LayuiXTree> buildByRecursive(List<LayuiXTree> treeNodes) {
+    public static List<LayuiXTree> buildByRecursive(List<LayuiXTree> treeNodes)
+    {
         List<LayuiXTree> trees = new ArrayList<>(treeNodes);
-        //权限标识是三级的，故此循环两次即可，此处后续可改为动态循环次数
+        // 权限标识是三级的，故此循环两次即可，此处后续可改为动态循环次数
         List<LayuiXTree> newTrees = iteratorIt(iteratorIt(trees));
         List<LayuiXTree> data = new ArrayList<>(20);
-        for (LayuiXTree treeNode : newTrees) {
-            if ("root".equals(treeNode.getParentId())) {
+        for (LayuiXTree treeNode : newTrees)
+        {
+            if ("root".equals(treeNode.getParentId()))
+            {
                 data.add(findChildren(treeNode, newTrees));
             }
         }
         return data;
     }
-
-    private static List<LayuiXTree> iteratorIt(List<LayuiXTree> data) {
+    
+    private static List<LayuiXTree> iteratorIt(List<LayuiXTree> data)
+    {
         List<LayuiXTree> trees = new ArrayList<>(data);
         data.forEach(d -> {
             LayuiXTree xTree = new LayuiXTree(d.getParentId(), getPid(d.getParentId()));
             long cnt1 = trees.stream().filter(tree -> tree.getId().equalsIgnoreCase(d.getParentId())).count();
-            if (cnt1 == 0) {
+            if (cnt1 == 0)
+            {
                 trees.add(xTree);
             }
         });
