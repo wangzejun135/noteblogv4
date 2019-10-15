@@ -11,6 +11,10 @@ import me.wuwenbin.noteblogv4.model.constant.NoteBlogV4;
 import me.wuwenbin.noteblogv4.model.entity.permission.NBSysUser;
 import me.wuwenbin.noteblogv4.model.pojo.business.QqLoginModel;
 import me.wuwenbin.noteblogv4.model.pojo.framework.NBR;
+import me.wuwenbin.noteblogv4.service.upload.QiniuUploadServiceImpl;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +30,9 @@ import static me.wuwenbin.noteblogv4.model.pojo.framework.NBR.ok;
 @Slf4j
 @Service
 public class QqLoginServiceImpl implements LoginService<QqLoginModel> {
+    
+    // 日志对象
+    private static Logger log = LoggerFactory.getLogger(QqLoginServiceImpl.class);
 
     private final ParamRepository paramRepository;
     private final UserRepository userRepository;

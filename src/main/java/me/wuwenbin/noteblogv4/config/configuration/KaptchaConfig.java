@@ -1,13 +1,14 @@
 package me.wuwenbin.noteblogv4.config.configuration;
 
-import com.google.code.kaptcha.Constants;
-import com.google.code.kaptcha.impl.DefaultKaptcha;
-import com.google.code.kaptcha.util.Config;
+import java.util.Properties;
+
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.Properties;
+import com.google.code.kaptcha.Constants;
+import com.google.code.kaptcha.impl.DefaultKaptcha;
+import com.google.code.kaptcha.util.Config;
 
 /**
  * 验证码配置
@@ -15,11 +16,13 @@ import java.util.Properties;
  * @author wuwenbin
  */
 @Configuration
-public class KaptchaConfig {
+public class KaptchaConfig 
+{
 
     @Bean
     @Qualifier("captchaProducer")
-    public DefaultKaptcha kaptcha() {
+    public DefaultKaptcha kaptcha() 
+    {
         DefaultKaptcha kaptcha = new DefaultKaptcha();
         Properties properties = new Properties();
         properties.setProperty(Constants.KAPTCHA_BORDER, "yes");

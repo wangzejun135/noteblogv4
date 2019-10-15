@@ -2,6 +2,7 @@ package me.wuwenbin.noteblogv4.web;
 
 import com.github.pagehelper.Page;
 import lombok.extern.slf4j.Slf4j;
+import me.wuwenbin.noteblogv4.config.application.SessionValidator;
 import me.wuwenbin.noteblogv4.dao.repository.ParamRepository;
 import me.wuwenbin.noteblogv4.model.constant.NoteBlogV4;
 import me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable;
@@ -9,6 +10,9 @@ import me.wuwenbin.noteblogv4.model.pojo.framework.NBR;
 import me.wuwenbin.noteblogv4.model.pojo.framework.Pagination;
 import me.wuwenbin.noteblogv4.util.CacheUtils;
 import me.wuwenbin.noteblogv4.util.NBUtils;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -34,6 +38,9 @@ import static me.wuwenbin.noteblogv4.model.constant.NoteBlogV4.ParamValue.STYLE_
  */
 @Slf4j
 public abstract class BaseController {
+    
+    // 日志对象
+    private static Logger log = LoggerFactory.getLogger(BaseController.class);
 
     /**
      * 基路径

@@ -3,6 +3,10 @@ package me.wuwenbin.noteblogv4.web;
 import com.google.code.kaptcha.Constants;
 import com.google.code.kaptcha.Producer;
 import lombok.extern.slf4j.Slf4j;
+import me.wuwenbin.noteblogv4.config.application.SessionValidator;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +27,9 @@ import java.io.IOException;
 @Controller
 @Slf4j
 public class KaptchaController {
+    
+    // 日志对象
+    private static Logger log = LoggerFactory.getLogger(SessionValidator.class);
 
     private final Producer captchaProducer;
 
