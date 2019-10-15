@@ -1,5 +1,16 @@
 package me.wuwenbin.noteblogv4.config.application;
 
+import static java.lang.Boolean.FALSE;
+import static java.time.LocalDateTime.now;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.StrUtil;
 import lombok.AllArgsConstructor;
@@ -9,21 +20,6 @@ import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import me.wuwenbin.noteblogv4.model.entity.permission.NBSysUser;
 import me.wuwenbin.noteblogv4.util.NBUtils;
-
-<<<<<<< HEAD
-=======
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
->>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
-
-import javax.servlet.http.HttpServletRequest;
-import java.io.Serializable;
-import java.time.LocalDateTime;
-
-import static java.lang.Boolean.FALSE;
-import static java.time.LocalDateTime.now;
 
 /**
  * created by Wuwenbin on 2018/2/7 at 20:56
@@ -35,25 +31,14 @@ import static java.time.LocalDateTime.now;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-<<<<<<< HEAD
 public class NBSession implements Serializable
 {
-=======
-public class NBSession implements Serializable {
->>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
     
     /**
      * 序列化
      */
     private static final long serialVersionUID = 1L;
-<<<<<<< HEAD
     
-=======
-
-    // 日志对象
-    private static Logger log = LoggerFactory.getLogger(NBSession.class);
-
->>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
     @Builder.Default
     private String id = IdUtil.randomUUID();
     
@@ -76,87 +61,6 @@ public class NBSession implements Serializable {
     
     private NBSysUser sessionUser;
     
-<<<<<<< HEAD
-=======
-    
-
-    public String getId()
-    {
-        return id;
-    }
-
-    public String getHost()
-    {
-        return host;
-    }
-
-    public LocalDateTime getStartTimestamp()
-    {
-        return startTimestamp;
-    }
-
-    public LocalDateTime getLastAccessTime()
-    {
-        return lastAccessTime;
-    }
-
-    public long getTimeout()
-    {
-        return timeout;
-    }
-
-    public LocalDateTime getExpireTimestamp()
-    {
-        return expireTimestamp;
-    }
-
-    public NBSysUser getSessionUser()
-    {
-        return sessionUser;
-    }
-
-    public void setId(String id)
-    {
-        this.id = id;
-    }
-
-    public void setHost(String host)
-    {
-        this.host = host;
-    }
-
-    public void setStartTimestamp(LocalDateTime startTimestamp)
-    {
-        this.startTimestamp = startTimestamp;
-    }
-
-    public void setLastAccessTime(LocalDateTime lastAccessTime)
-    {
-        this.lastAccessTime = lastAccessTime;
-    }
-
-    public void setTimeout(long timeout)
-    {
-        this.timeout = timeout;
-    }
-
-    public void setExpireTimestamp(LocalDateTime expireTimestamp)
-    {
-        this.expireTimestamp = expireTimestamp;
-    }
-
-    public void setExpired(boolean expired)
-    {
-        this.expired = expired;
-    }
-
-    public void setSessionUser(NBSysUser sessionUser)
-    {
-        this.sessionUser = sessionUser;
-    }
-
-
->>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
     public static final long DEFAULT_TIMEOUT_MILLS = 30 * 60 * 1000;
     
     private static HttpServletRequest getRequest()
@@ -224,5 +128,5 @@ public class NBSession implements Serializable {
         this.expired = true;
         return true;
     }
-
+    
 }

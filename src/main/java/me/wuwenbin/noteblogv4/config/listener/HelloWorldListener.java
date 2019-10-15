@@ -1,19 +1,7 @@
 package me.wuwenbin.noteblogv4.config.listener;
 
-<<<<<<< HEAD
 import java.time.LocalDateTime;
 
-=======
-import lombok.extern.slf4j.Slf4j;
-import me.wuwenbin.noteblogv4.dao.repository.ArticleRepository;
-import me.wuwenbin.noteblogv4.dao.repository.CateRepository;
-import me.wuwenbin.noteblogv4.exception.InitException;
-import me.wuwenbin.noteblogv4.model.entity.NBArticle;
-import me.wuwenbin.noteblogv4.model.entity.NBCate;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
->>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
@@ -35,17 +23,9 @@ import me.wuwenbin.noteblogv4.model.entity.NBCate;
 @Slf4j
 @Component
 @Order(4)
-<<<<<<< HEAD
 public class HelloWorldListener implements ApplicationListener<ApplicationReadyEvent>
 {
     
-=======
-public class HelloWorldListener implements ApplicationListener<ApplicationReadyEvent> {
-    
-    // 日志对象
-    private static Logger log = LoggerFactory.getLogger(HelloWorldListener.class);
-
->>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
     private final CateRepository cateRepository;
     
     private final ArticleRepository articleRepository;

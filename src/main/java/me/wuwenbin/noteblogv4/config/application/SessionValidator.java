@@ -1,16 +1,8 @@
 package me.wuwenbin.noteblogv4.config.application;
 
-<<<<<<< HEAD
 import java.time.LocalDateTime;
 import java.util.Enumeration;
 
-=======
-import cn.hutool.core.util.StrUtil;
-import lombok.extern.slf4j.Slf4j;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
->>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -27,17 +19,9 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Component
 @EnableScheduling
-<<<<<<< HEAD
 public class SessionValidator
 {
     
-=======
-public class SessionValidator {
-    
-    // 日志对象
-    private static Logger log = LoggerFactory.getLogger(SessionValidator.class);
-
->>>>>>> fcd3c059bcf0142a8234a8091b634aea80b4fdf5
     private final NBContext nbContext;
     
     @Autowired
