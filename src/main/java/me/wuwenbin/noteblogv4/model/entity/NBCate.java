@@ -1,13 +1,19 @@
 package me.wuwenbin.noteblogv4.model.entity;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
-import java.io.Serializable;
 
 /**
  * 文章分类表 created by Wuwenbin on 2018/7/15 at 11:49
@@ -42,45 +48,5 @@ public class NBCate implements Serializable
     private String cnName;
     
     private String fontIcon;
-    
-    public Long getId()
-    {
-        return id;
-    }
-    
-    public String getName()
-    {
-        return name;
-    }
-    
-    public String getCnName()
-    {
-        return cnName;
-    }
-    
-    public String getFontIcon()
-    {
-        return fontIcon;
-    }
-    
-    public void setId(Long id)
-    {
-        this.id = id;
-    }
-    
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-    
-    public void setCnName(String cnName)
-    {
-        this.cnName = cnName;
-    }
-    
-    public void setFontIcon(String fontIcon)
-    {
-        this.fontIcon = fontIcon;
-    }
     
 }

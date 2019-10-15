@@ -1,17 +1,25 @@
 package me.wuwenbin.noteblogv4.model.entity;
 
+import static java.lang.Boolean.TRUE;
+import static java.time.LocalDateTime.now;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import me.wuwenbin.noteblogv4.model.entity.permission.NBSysUser;
-
-import javax.persistence.*;
-import java.io.Serializable;
-import java.time.LocalDateTime;
-
-import static java.lang.Boolean.TRUE;
-import static java.time.LocalDateTime.now;
 
 /**
  * created by Wuwenbin on 2018/7/15 at 11:52
@@ -25,6 +33,11 @@ import static java.time.LocalDateTime.now;
 @AllArgsConstructor
 @NoArgsConstructor
 public class NBComment implements Serializable {
+
+    /**
+     * 序列化
+     */
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

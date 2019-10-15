@@ -5,12 +5,20 @@ package me.wuwenbin.noteblogv4.exception;
  *
  * @author wuwenbin
  */
-public class ArticleFetchFailedException extends RuntimeException {
-    public ArticleFetchFailedException() {
+public class ArticleFetchFailedException extends RuntimeException
+{
+    /**
+     * 序列化
+     */
+    private static final long serialVersionUID = 1L;
+    
+    public ArticleFetchFailedException()
+    {
         super("文章获取失败！");
     }
-
-    public ArticleFetchFailedException(String message) {
+    
+    public ArticleFetchFailedException(String message)
+    {
         super(message);
     }
 }

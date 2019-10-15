@@ -1,15 +1,27 @@
 package me.wuwenbin.noteblogv4.model.entity.permission;
 
+import java.io.Serializable;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 
 /**
  * created by Wuwenbin on 2018/7/20 at 21:23
@@ -64,146 +76,6 @@ public class NBSysMenu implements Serializable {
     @OneToOne(cascade = CascadeType.DETACH)
     @JoinColumn(name = "resource_id")
     private NBSysResource resource;
-    
-    
-
-    public Long getId()
-    {
-        return id;
-    }
-
-
-
-    public Long getParentId()
-    {
-        return parentId;
-    }
-
-
-
-    public String getName()
-    {
-        return name;
-    }
-
-
-
-    public String getIcon()
-    {
-        return icon;
-    }
-
-
-
-    public MenuType getType()
-    {
-        return type;
-    }
-
-
-
-    public Long getRoleId()
-    {
-        return roleId;
-    }
-
-
-
-    public Boolean getEnable()
-    {
-        return enable;
-    }
-
-
-
-    public String getRemark()
-    {
-        return remark;
-    }
-
-
-
-    public Integer getOrderIndex()
-    {
-        return orderIndex;
-    }
-
-
-
-    public NBSysResource getResource()
-    {
-        return resource;
-    }
-
-
-
-    public void setId(Long id)
-    {
-        this.id = id;
-    }
-
-
-
-    public void setParentId(Long parentId)
-    {
-        this.parentId = parentId;
-    }
-
-
-
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-
-
-
-    public void setIcon(String icon)
-    {
-        this.icon = icon;
-    }
-
-
-
-    public void setType(MenuType type)
-    {
-        this.type = type;
-    }
-
-
-
-    public void setRoleId(Long roleId)
-    {
-        this.roleId = roleId;
-    }
-
-
-
-    public void setEnable(Boolean enable)
-    {
-        this.enable = enable;
-    }
-
-
-
-    public void setRemark(String remark)
-    {
-        this.remark = remark;
-    }
-
-
-
-    public void setOrderIndex(Integer orderIndex)
-    {
-        this.orderIndex = orderIndex;
-    }
-
-
-
-    public void setResource(NBSysResource resource)
-    {
-        this.resource = resource;
-    }
 
 
 

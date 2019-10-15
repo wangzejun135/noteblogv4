@@ -1,18 +1,25 @@
 package me.wuwenbin.noteblogv4.model.entity.permission;
 
+import static java.lang.Boolean.TRUE;
+import static java.time.LocalDateTime.now;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
-import java.io.Serializable;
-import java.time.LocalDateTime;
-
-import static java.lang.Boolean.TRUE;
-import static java.time.LocalDateTime.now;
 
 /**
  * created by Wuwenbin on 2018/7/14 at 10:37
@@ -74,125 +81,5 @@ public class NBSysUser implements Serializable
     private String qqOpenId;
     
     private String wechatOpenId;
-    
-    public Long getId()
-    {
-        return id;
-    }
-    
-    public String getUsername()
-    {
-        return username;
-    }
-    
-    public String getNickname()
-    {
-        return nickname;
-    }
-    
-    public String getAvatar()
-    {
-        return avatar;
-    }
-    
-    public String getPassword()
-    {
-        return password;
-    }
-    
-    public LocalDateTime getCreate()
-    {
-        return create;
-    }
-    
-    public String getQqNum()
-    {
-        return qqNum;
-    }
-    
-    public String getEmail()
-    {
-        return email;
-    }
-    
-    public Long getDefaultRoleId()
-    {
-        return defaultRoleId;
-    }
-    
-    public Boolean getEnable()
-    {
-        return enable;
-    }
-    
-    public String getQqOpenId()
-    {
-        return qqOpenId;
-    }
-    
-    public String getWechatOpenId()
-    {
-        return wechatOpenId;
-    }
-    
-    public void setId(Long id)
-    {
-        this.id = id;
-    }
-    
-    public void setUsername(String username)
-    {
-        this.username = username;
-    }
-    
-    public void setNickname(String nickname)
-    {
-        this.nickname = nickname;
-    }
-    
-    public void setAvatar(String avatar)
-    {
-        this.avatar = avatar;
-    }
-    
-    public void setPassword(String password)
-    {
-        this.password = password;
-    }
-    
-    public void setCreate(LocalDateTime create)
-    {
-        this.create = create;
-    }
-    
-    public void setQqNum(String qqNum)
-    {
-        this.qqNum = qqNum;
-    }
-    
-    public void setEmail(String email)
-    {
-        this.email = email;
-    }
-    
-    public void setDefaultRoleId(Long defaultRoleId)
-    {
-        this.defaultRoleId = defaultRoleId;
-    }
-    
-    public void setEnable(Boolean enable)
-    {
-        this.enable = enable;
-    }
-    
-    public void setQqOpenId(String qqOpenId)
-    {
-        this.qqOpenId = qqOpenId;
-    }
-    
-    public void setWechatOpenId(String wechatOpenId)
-    {
-        this.wechatOpenId = wechatOpenId;
-    }
     
 }

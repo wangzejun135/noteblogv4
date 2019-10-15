@@ -5,8 +5,15 @@ package me.wuwenbin.noteblogv4.exception;
  *
  * @author wuwenbin
  */
-public class NoteFetchFailedException extends RuntimeException {
-    public NoteFetchFailedException() {
+public class NoteFetchFailedException extends RuntimeException
+{
+    /**
+     * 序列化
+     */
+    private static final long serialVersionUID = 1L;
+    
+    public NoteFetchFailedException()
+    {
         super("笔记获取失败！");
     }
 }
