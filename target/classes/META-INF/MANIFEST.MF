@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: noteblogv4
+Implementation-Version: 4.0.1-beta3
+Built-By: wangzejun
+Implementation-Vendor-Id: me.wuwenbin
+Build-Jdk: 1.8.0_121
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/noteblogv4
+Created-By: Maven Integration for Eclipse
+
