@@ -1,0 +1,985 @@
+11:07:27.999 [restartedMain] INFO  m.w.n.NoteBlogV4Application - Starting NoteBlogV4Application on Wangzejun with PID 22540 (E:\git_newportal_workspace\noteblogv4\target\classes started by wangzejun in E:\git_newportal_workspace\noteblogv4) 
+11:07:28.001 [restartedMain] INFO  m.w.n.NoteBlogV4Application - The following profiles are active: noteblogv4 
+11:07:28.096 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7c00176: startup date [Wed Oct 16 11:07:28 CST 2019]; root of context hierarchy 
+11:07:29.270 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[me.wuwenbin.noteblogv4.dao.mapper]' package. Please check your configuration. 
+11:07:29.479 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[me.wuwenbin.noteblogv4]' package. Please check your configuration. 
+11:07:30.402 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2be484ae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+11:07:30.879 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default' 
+11:07:30.901 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+11:07:30.994 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final} 
+11:07:30.996 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found 
+11:07:31.040 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+11:07:31.356 [restartedMain] INFO  c.a.druid.pool.DruidDataSource - {dataSource-1} inited 
+11:07:31.553 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: me.wuwenbin.noteblogv4.config.configuration.LocalMySQL57InnoDBDialect 
+11:07:32.165 [restartedMain] WARN  org.hibernate.id.UUIDHexGenerator - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead 
+11:07:32.753 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+11:07:33.067 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory 
+11:07:33.745 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8089 (http) 
+11:07:33.770 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+11:07:33.771 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31 
+11:07:33.782 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_121\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk1.8.0_121/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_121/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_121/bin/../jre/lib/amd64;E:\Xsheel_6\Xsheel6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_121\bin;C:\Program Files\Java\jdk1.8.0_121\jre\bin;E:\maven\onlyformigu\apache-maven-3.3.9\bin;E:\Apache\mysql-5.7.21-winx64\bin;E:\oracle\product\10.2.0\db_1\bin;C:\ProgramData\Oracle\Java\javapath;F:\TortoiseSVN\bin;E:\Git\cmd;E:\git_workspace\DOCS\tools;;C:\WINDOWS\System32\OpenSSH\;C:\Users\JoashYe\AppData\Local\Microsoft\WindowsApps;;C:\Users\JoashYe\AppData\Local\Programs\Fiddler;E:\Fiddler;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;E:\eclipse;;.] 
+11:07:33.943 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+11:07:33.943 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5847 ms 
+11:07:34.176 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/] 
+11:07:34.179 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet statViewServlet mapped to [/druid/*] 
+11:07:34.183 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
+11:07:34.184 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+11:07:34.184 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+11:07:34.184 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
+11:07:34.185 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*] 
+11:07:35.102 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+11:07:35.455 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7c00176: startup date [Wed Oct 16 11:07:28 CST 2019]; root of context hierarchy 
+11:07:35.463 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Detected @ModelAttribute methods in globalController 
+11:07:35.508 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+11:07:35.538 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/registration],methods=[POST]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.EntranceController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest) 
+11:07:35.539 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[POST]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.EntranceController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,me.wuwenbin.noteblogv4.model.pojo.business.SimpleLoginData) 
+11:07:35.539 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[GET]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.EntranceController.login(javax.servlet.http.HttpServletRequest,java.lang.String) 
+11:07:35.540 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/registration],methods=[GET]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.EntranceController.registration() 
+11:07:35.540 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/logout],methods=[GET]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.EntranceController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String) 
+11:07:35.540 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/token/logout],methods=[GET]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.EntranceController.logout2(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String) 
+11:07:35.540 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/qq]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.EntranceController.qqLogin(javax.servlet.http.HttpServletRequest) 
+11:07:35.541 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/qqCallback]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.EntranceController.qqCallback(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) 
+11:07:35.542 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[application/json || application/x-www-form-urlencoded || multipart/form-data]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.ErrorController.error(javax.servlet.http.HttpServletRequest) 
+11:07:35.543 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView me.wuwenbin.noteblogv4.web.ErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+11:07:35.544 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/file]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.frontend.CloudFileController.file(org.springframework.ui.Model,java.lang.Long) 
+11:07:35.545 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/file/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBCloudFile> me.wuwenbin.noteblogv4.web.frontend.CloudFileController.cateList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBCloudFile>,java.lang.Long,java.lang.String) 
+11:07:35.548 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/article/comments || /a/comments],methods=[POST]}" onto public org.springframework.data.domain.Page<me.wuwenbin.noteblogv4.model.entity.NBComment> me.wuwenbin.noteblogv4.web.frontend.content.ArticleController.comments(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBComment>,me.wuwenbin.noteblogv4.model.pojo.bo.CommentQueryBO) 
+11:07:35.548 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/article/approve || /a/approve],methods=[POST]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.frontend.content.ArticleController.approve(java.lang.Long) 
+11:07:35.549 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/article/u/{urlSeq} || /a/u/{urlSeq}]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.frontend.content.ArticleController.articleByUrl(java.lang.String,org.springframework.ui.Model,me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBComment>,me.wuwenbin.noteblogv4.model.pojo.bo.CommentQueryBO) 
+11:07:35.549 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/article/{aId} || /a/{aId}]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.frontend.content.ArticleController.article(java.lang.Long,org.springframework.ui.Model,me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBComment>,me.wuwenbin.noteblogv4.model.pojo.bo.CommentQueryBO) 
+11:07:35.550 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/token/comment/sub],methods=[POST]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.frontend.content.CommentController.sub(me.wuwenbin.noteblogv4.model.entity.NBComment,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest) 
+11:07:35.550 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/msg]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.frontend.content.MessageController.index(org.springframework.ui.Model,me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBMessage>,me.wuwenbin.noteblogv4.model.pojo.bo.MessageQueryBO) 
+11:07:35.551 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/msg/lists],methods=[POST]}" onto public org.springframework.data.domain.Page<me.wuwenbin.noteblogv4.model.entity.NBMessage> me.wuwenbin.noteblogv4.web.frontend.content.MessageController.comments(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBMessage>,me.wuwenbin.noteblogv4.model.pojo.bo.MessageQueryBO) 
+11:07:35.551 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/token/msg/sub],methods=[POST]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.frontend.content.MessageController.sub(me.wuwenbin.noteblogv4.model.entity.NBMessage,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest) 
+11:07:35.552 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/note],methods=[GET]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.frontend.content.NoteController.index(org.springframework.ui.Model) 
+11:07:35.553 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/note/next],methods=[POST]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.frontend.content.NoteController.next(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBNote>,java.lang.String,java.lang.String) 
+11:07:35.553 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[ || /index]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.frontend.IndexController.index(org.springframework.ui.Model) 
+11:07:35.553 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/next || /index/next]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.frontend.IndexController.nextPageArticle(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBArticle>,me.wuwenbin.noteblogv4.model.pojo.bo.ArticleQueryBO) 
+11:07:35.554 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/profile]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.frontend.ProfileController.profile(org.springframework.ui.Model) 
+11:07:35.555 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/project/next],methods=[POST]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.frontend.ProjectController.next(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBNote>,java.lang.Long) 
+11:07:35.555 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/project]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.frontend.ProjectController.project(org.springframework.ui.Model,me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBProject>,java.lang.Long) 
+11:07:35.556 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/tag/all],methods=[GET]}" onto public java.util.List<me.wuwenbin.noteblogv4.model.entity.NBTag> me.wuwenbin.noteblogv4.web.frontend.TagController.tagsList() 
+11:07:35.556 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/init]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.InitController.init() 
+11:07:35.556 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/font/list]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.InitController.b(javax.servlet.http.HttpServletRequest) 
+11:07:35.557 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/init/submit]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.InitController.initSubmit(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String) 
+11:07:35.557 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/image/code]}" onto public org.springframework.web.servlet.ModelAndView me.wuwenbin.noteblogv4.web.KaptchaController.kaptcha(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException 
+11:07:35.557 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/index]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.AdminIndexController.index(org.springframework.ui.Model) 
+11:07:35.558 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dashboard]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.AdminIndexController.dashboard(org.springframework.ui.Model) 
+11:07:35.563 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu/delete]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.deleteMenu(java.lang.Long) 
+11:07:35.563 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/update/role/resource]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.updateRoleResource(java.lang.Long,java.lang.Long[]) 
+11:07:35.564 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/role/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.addRole(me.wuwenbin.noteblogv4.model.entity.permission.NBSysRole,org.springframework.validation.BindingResult) 
+11:07:35.564 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/resource/tree]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.resourcesTree(java.lang.Long) 
+11:07:35.564 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.menuIndex(org.springframework.ui.Model,java.lang.Long) 
+11:07:35.565 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/role/delete]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.deleteRole(java.lang.Long) 
+11:07:35.565 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.permission.NBSysMenu> me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.roleMenuList(java.lang.Long) 
+11:07:35.565 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/role]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.roleRouter(org.springframework.ui.Model) 
+11:07:35.565 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/role/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.updateRole(me.wuwenbin.noteblogv4.model.entity.permission.NBSysRole,org.springframework.validation.BindingResult) 
+11:07:35.570 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu/edit]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.addMenu(org.springframework.ui.Model,java.lang.Long,java.lang.Long) 
+11:07:35.570 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu/add]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.addMenu(org.springframework.ui.Model,java.lang.Long,java.lang.String) 
+11:07:35.571 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.modifyMenu(me.wuwenbin.noteblogv4.model.entity.permission.NBSysMenu,org.springframework.validation.BindingResult) 
+11:07:35.572 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.createMenu(me.wuwenbin.noteblogv4.model.entity.permission.NBSysMenu,org.springframework.validation.BindingResult) 
+11:07:35.573 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users/list],methods=[GET]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.permission.NBSysUser> me.wuwenbin.noteblogv4.web.management.authority.UserController.userList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.permission.NBSysUser>,me.wuwenbin.noteblogv4.model.entity.permission.NBSysUser) 
+11:07:35.574 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users/roles/id/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.UserController.userRolesIdUpdate(java.lang.Long,java.lang.String) 
+11:07:35.574 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users/roles/str/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.UserController.userRolesStrUpdate(java.lang.Long,java.lang.String) 
+11:07:35.574 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users/roles/list]}" onto public java.util.List<me.wuwenbin.noteblogv4.model.entity.permission.NBSysRole> me.wuwenbin.noteblogv4.web.management.authority.UserController.roleList(java.lang.Long) 
+11:07:35.574 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users/nickname/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.UserController.nicknameUpdate(java.lang.Long,java.lang.String) 
+11:07:35.574 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users/enable/update],methods=[POST]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.UserController.enableUpdate(java.lang.Long,java.lang.Boolean) 
+11:07:35.575 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.authority.UserController.usersListRouter() 
+11:07:35.576 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile/add]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.CloudFileController.add(org.springframework.ui.Model) 
+11:07:35.576 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile/delete/{id}]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.CloudFileController.delete(java.lang.Long) 
+11:07:35.576 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile],methods=[GET]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.CloudFileController.list() 
+11:07:35.576 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile/edit]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.CloudFileController.edit(org.springframework.ui.Model,java.lang.Long) 
+11:07:35.576 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile/list],methods=[GET]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBCloudFile> me.wuwenbin.noteblogv4.web.management.CloudFileController.cloudFileList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBCloudFile>) 
+11:07:35.576 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.CloudFileController.projectUpdate(me.wuwenbin.noteblogv4.model.entity.NBCloudFile,org.springframework.validation.BindingResult) 
+11:07:35.577 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.CloudFileController.projectCreate(me.wuwenbin.noteblogv4.model.entity.NBCloudFile,org.springframework.validation.BindingResult) 
+11:07:35.578 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/delete/{id}]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.ArticleController.delete(java.lang.Long) 
+11:07:35.578 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/update/top/{id}]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.ArticleController.top(java.lang.Long,java.lang.Boolean) 
+11:07:35.578 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/update/commented/{id}]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.ArticleController.commented(java.lang.Long,java.lang.Boolean) 
+11:07:35.578 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/edit/tags]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.ArticleController.editPageArticleTags(java.lang.Long) 
+11:07:35.578 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/update/appreciable/{id}]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.ArticleController.appreciable(java.lang.Long,java.lang.Boolean) 
+11:07:35.579 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/post]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.content.ArticleController.article(org.springframework.ui.Model) 
+11:07:35.579 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.ArticleController.articleCreate(me.wuwenbin.noteblogv4.model.entity.NBArticle,org.springframework.validation.BindingResult,java.lang.String,java.lang.String) 
+11:07:35.579 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/list],methods=[GET]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBArticle> me.wuwenbin.noteblogv4.web.management.content.ArticleController.articleList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBArticle>,java.lang.String,java.lang.String) 
+11:07:35.579 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article],methods=[GET]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.content.ArticleController.articleList() 
+11:07:35.579 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/edit]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.content.ArticleController.edit(org.springframework.ui.Model,java.lang.Long) 
+11:07:35.580 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.ArticleController.articleUpdate(me.wuwenbin.noteblogv4.model.entity.NBArticle,org.springframework.validation.BindingResult,java.lang.String,java.lang.String) 
+11:07:35.581 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/delete/{id}]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.NoteController.delete(java.lang.Long) 
+11:07:35.581 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/update/top/{id}]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.NoteController.top(java.lang.Long,java.lang.Boolean) 
+11:07:35.581 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.NoteController.updateNote(me.wuwenbin.noteblogv4.model.entity.NBNote,org.springframework.validation.BindingResult,java.lang.String) 
+11:07:35.581 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/update/show/{id}]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.NoteController.show(java.lang.Long,java.lang.Boolean) 
+11:07:35.581 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/edit]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.content.NoteController.edit(org.springframework.ui.Model,java.lang.Long) 
+11:07:35.581 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/post]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.content.NoteController.notePost() 
+11:07:35.582 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.NoteController.noteCreate(me.wuwenbin.noteblogv4.model.entity.NBNote,org.springframework.validation.BindingResult,java.lang.String) 
+11:07:35.582 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/edit/tags]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.NoteController.editPageNoteTags(java.lang.Long) 
+11:07:35.582 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note],methods=[GET]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.content.NoteController.noteList() 
+11:07:35.582 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/list],methods=[GET]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBNote> me.wuwenbin.noteblogv4.web.management.content.NoteController.noteList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBNote>,java.lang.String,java.lang.String) 
+11:07:35.583 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cate/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminCateController.update(me.wuwenbin.noteblogv4.model.entity.NBCate,org.springframework.validation.BindingResult) 
+11:07:35.583 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cate/delete]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminCateController.delete(java.lang.Long) 
+11:07:35.583 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cate/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBCate> me.wuwenbin.noteblogv4.web.management.dictionary.AdminCateController.cateList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBCate>) 
+11:07:35.583 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cate]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.dictionary.AdminCateController.cate() 
+11:07:35.583 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cate/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminCateController.cateCreate(me.wuwenbin.noteblogv4.model.entity.NBCate) 
+11:07:35.584 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cloudFileCate/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminCloudFileCateController.update(me.wuwenbin.noteblogv4.model.entity.NBCloudFileCate,org.springframework.validation.BindingResult) 
+11:07:35.584 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cloudFileCate/delete]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminCloudFileCateController.delete(java.lang.Long) 
+11:07:35.584 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cloudFileCate/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBCloudFileCate> me.wuwenbin.noteblogv4.web.management.dictionary.AdminCloudFileCateController.cateList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBCloudFileCate>) 
+11:07:35.584 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cloudFileCate]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.dictionary.AdminCloudFileCateController.cate() 
+11:07:35.585 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cloudFileCate/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminCloudFileCateController.cateCreate(me.wuwenbin.noteblogv4.model.entity.NBCloudFileCate) 
+11:07:35.585 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/keyword/delete]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminKeywordController.delete(java.lang.Long) 
+11:07:35.585 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/keyword]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.dictionary.AdminKeywordController.cate() 
+11:07:35.586 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/keyword/update/enable]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminKeywordController.enableUpdate(me.wuwenbin.noteblogv4.model.entity.NBKeyword) 
+11:07:35.586 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/keyword/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminKeywordController.wordsUpdate(me.wuwenbin.noteblogv4.model.entity.NBKeyword,org.springframework.validation.BindingResult) 
+11:07:35.586 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/keyword/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBKeyword> me.wuwenbin.noteblogv4.web.management.dictionary.AdminKeywordController.keywordList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBKeyword>) 
+11:07:35.587 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/keyword/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminKeywordController.keywordCreate(me.wuwenbin.noteblogv4.model.entity.NBKeyword) 
+11:07:35.587 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/projectCate/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminProjectCateController.update(me.wuwenbin.noteblogv4.model.entity.NBProjectCate,org.springframework.validation.BindingResult) 
+11:07:35.587 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/projectCate/delete]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminProjectCateController.delete(java.lang.Long) 
+11:07:35.588 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/projectCate/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBProjectCate> me.wuwenbin.noteblogv4.web.management.dictionary.AdminProjectCateController.cateList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBProjectCate>) 
+11:07:35.588 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/projectCate]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.dictionary.AdminProjectCateController.cate() 
+11:07:35.588 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/projectCate/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminProjectCateController.cateCreate(me.wuwenbin.noteblogv4.model.entity.NBProjectCate) 
+11:07:35.588 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/tag/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminTagController.update(me.wuwenbin.noteblogv4.model.entity.NBTag,org.springframework.validation.BindingResult) 
+11:07:35.589 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/tag/delete]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminTagController.delete(java.lang.Long) 
+11:07:35.589 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/tag/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBTag> me.wuwenbin.noteblogv4.web.management.dictionary.AdminTagController.cateList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBTag>,java.lang.String) 
+11:07:35.589 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/tag]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.dictionary.AdminTagController.tagIndex() 
+11:07:35.589 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/comment/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.message.AdminCommentController.delete(java.lang.Long,boolean) 
+11:07:35.589 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/comment/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBComment> me.wuwenbin.noteblogv4.web.management.message.AdminCommentController.cateList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBComment>,java.lang.String) 
+11:07:35.590 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/comment]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.message.AdminCommentController.tagIndex() 
+11:07:35.590 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/message/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.message.AdminMessageController.delete(java.lang.Long,boolean) 
+11:07:35.590 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/message/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBMessage> me.wuwenbin.noteblogv4.web.management.message.AdminMessageController.cateList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBMessage>,java.lang.String) 
+11:07:35.590 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/message]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.message.AdminMessageController.tagIndex() 
+11:07:35.591 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.ProfileController.profile() 
+11:07:35.591 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile/delete]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.ProfileController.delete(java.lang.Long) 
+11:07:35.591 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile/edit]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.ProfileController.edit(org.springframework.ui.Model,java.lang.Long) 
+11:07:35.591 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile/add]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.ProfileController.notePost() 
+11:07:35.592 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.ProfileController.profileUpdate(me.wuwenbin.noteblogv4.model.entity.NBAbout,org.springframework.validation.BindingResult) 
+11:07:35.592 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBAbout> me.wuwenbin.noteblogv4.web.management.ProfileController.aboutList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBAbout>) 
+11:07:35.592 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.ProfileController.aboutCreate(me.wuwenbin.noteblogv4.model.entity.NBAbout) 
+11:07:35.593 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project/add]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.ProjectController.add(org.springframework.ui.Model) 
+11:07:35.593 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project/delete/{id}]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.ProjectController.delete(java.lang.Long) 
+11:07:35.593 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project],methods=[GET]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.ProjectController.list() 
+11:07:35.593 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project/edit]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.ProjectController.edit(org.springframework.ui.Model,java.lang.Long) 
+11:07:35.593 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.ProjectController.projectUpdate(me.wuwenbin.noteblogv4.model.entity.NBProject,org.springframework.validation.BindingResult) 
+11:07:35.593 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.ProjectController.projectCreate(me.wuwenbin.noteblogv4.model.entity.NBProject,org.springframework.validation.BindingResult) 
+11:07:35.593 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project/list],methods=[GET]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBProject> me.wuwenbin.noteblogv4.web.management.ProjectController.projectList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBProject>) 
+11:07:35.594 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.settings.SettingsController.update(java.lang.String,java.lang.String,java.lang.String) 
+11:07:35.595 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/mail/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.settings.SettingsController.updateMailConfig(javax.servlet.http.HttpServletRequest) 
+11:07:35.595 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/common]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.settings.SettingsController.settingsCommon(org.springframework.ui.Model) 
+11:07:35.595 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/theme]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.settings.SettingsController.settingTheme(org.springframework.ui.Model) 
+11:07:35.595 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/mail]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.settings.SettingsController.settingsMail(org.springframework.ui.Model) 
+11:07:35.595 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/qrcode]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.settings.SettingsController.settingsQrcode(org.springframework.ui.Model) 
+11:07:35.595 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/profile]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.settings.SettingsController.settingsProfile(org.springframework.ui.Model,java.lang.String) 
+11:07:35.596 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/profile/update],methods=[POST]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.settings.SettingsController.updateProfile(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) 
+11:07:35.597 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/pay/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.settings.SettingsController.updateQrcode(java.lang.String,java.lang.String,java.lang.String) 
+11:07:35.597 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/upload],methods=[POST]}" onto public java.lang.Object me.wuwenbin.noteblogv4.web.management.upload.UploadController.upload(javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartFile,java.lang.String) 
+11:07:35.597 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/upload/editorMD],methods=[POST]}" onto public java.lang.Object me.wuwenbin.noteblogv4.web.management.upload.UploadController.uploadEditorMD(org.springframework.web.multipart.MultipartFile) 
+11:07:35.630 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+11:07:35.631 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+11:07:35.631 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+11:07:35.631 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/upfiles/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+11:07:35.704 [restartedMain] WARN  o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead. 
+11:07:36.715 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+11:07:36.740 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup 
+11:07:36.741 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure 
+11:07:36.743 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'statFilter' has been autodetected for JMX exposure 
+11:07:36.748 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper] 
+11:07:36.749 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter] 
+11:07:36.758 [restartedMain] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing 
+11:07:36.764 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 「个人博客」APP 正在检测初始化状态，请稍后... 
+11:07:36.837 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 「个人博客」APP 已初始化，开始准备其它内容，请稍后... 
+11:07:36.837 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 「个人博客」App 正在启动中，请稍后... 
+11:07:36.841 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/registration] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.841 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/login] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.842 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/login] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.842 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/registration] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.843 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/logout'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.846 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/token/logout] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.849 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/api/qq] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.849 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/api/qqCallback] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.849 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.849 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.849 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/file] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/file/list] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/article/comments] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/article/approve] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/article/u/{urlSeq}] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/article] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/article] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/article] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/article] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/article/{aId}] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/a/comments] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/a/approve] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/a/u/{urlSeq}] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/a] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.850 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/a] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.851 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/a] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.851 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/a] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.851 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/a/{aId}] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.851 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/token/comment/sub] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.851 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/token/comment] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.851 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/token/comment] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.851 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/token/comment] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.851 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/token/comment] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.851 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/msg] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.851 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/msg/lists] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.851 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/token/msg/sub] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.851 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.852 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.852 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.852 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.852 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/note] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.852 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/note/next] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.852 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.852 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/index] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.852 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.852 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/next] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.852 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/index/next] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.852 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.852 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.853 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.853 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/profile] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.853 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/project/next] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.853 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/project] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.853 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/tag] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.853 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/init] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.853 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/font/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.853 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/init/submit] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.853 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/image/code] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.853 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/index'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.853 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dashboard'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.853 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/menu/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.853 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/update/role/resource'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.853 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/role/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.853 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/resource/tree'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.853 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/menu'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.854 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/role/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.854 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/menu/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.854 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/role'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.854 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/role/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.854 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/menu/edit'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.854 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/menu/add'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.854 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/menu/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.854 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/menu/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.854 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/users/list'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.854 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/users] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.855 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/users/roles/id/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.855 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/users/roles/str/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.855 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/users] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.855 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/users] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.855 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/users] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.855 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/users/roles/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.855 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/users/nickname/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.855 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/users/enable/update'，请求方式：'[POST]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.855 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/users'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.855 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/cloudFile/add'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.855 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/cloudFile/delete/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.855 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/cloudFile'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.855 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/cloudFile] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.855 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/cloudFile] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.855 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/cloudFile] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.855 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/cloudFile] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.855 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/cloudFile/edit'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.855 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/cloudFile/list'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.856 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/cloudFile/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.856 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/cloudFile] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.856 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/cloudFile/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.856 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/delete/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.856 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/update/top/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.856 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.856 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/update/commented/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.856 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/edit/tags'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.856 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/update/appreciable/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.856 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.856 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.856 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.856 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/post'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.856 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.856 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/list'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.856 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.857 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/edit'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.857 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.857 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.857 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.857 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.857 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note/delete/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.857 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note/update/top/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.857 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.857 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.859 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note/update/show/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.859 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.859 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.859 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.859 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note/edit'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.859 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.859 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note/post'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.859 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.859 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note/edit/tags'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.859 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.859 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.859 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.859 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note/list'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.859 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cate/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.859 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cate/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.860 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cate/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.860 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.860 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.860 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cate'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.860 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.860 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.860 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.860 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.860 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.860 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.861 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cate/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.861 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.861 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.861 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.861 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.861 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.861 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.861 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cloudFileCate/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.861 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cloudFileCate/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.861 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cloudFileCate/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.861 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.861 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.861 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cloudFileCate'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.861 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.861 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.861 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.861 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.861 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.862 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.862 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cloudFileCate/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.862 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.862 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.862 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.862 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.865 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.865 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.865 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/keyword/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.865 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.865 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.865 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/keyword'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.865 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.865 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.865 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.865 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/keyword/update/enable'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.865 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.865 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.865 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.865 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/keyword/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.865 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.865 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/keyword/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.865 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.866 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.866 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.866 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/keyword/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.866 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.866 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/projectCate/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.866 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/projectCate/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.866 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/projectCate/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.866 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.866 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.869 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/projectCate'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.869 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.869 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.869 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.869 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.870 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.870 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.870 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/projectCate/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.870 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.870 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.870 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.870 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.870 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.870 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.870 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/tag/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.870 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/tag/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.870 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/tag/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.870 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/tag] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.870 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/tag] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.871 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/tag] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.871 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/tag] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.871 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/tag] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.871 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/tag] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.871 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/tag'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.871 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/comment/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.871 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/comment/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.871 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/comment] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.872 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/comment] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.872 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/comment'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.872 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/message/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.872 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/message/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.872 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/message] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.872 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/message] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.872 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/message'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/profile'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/profile/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/profile/edit'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/profile/add'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/profile/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/profile/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/profile/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/project/add'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/project/delete/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.873 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/project'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.874 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/project] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.874 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/project] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.874 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/project] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.874 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/project] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.874 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/project/edit'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.874 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/project/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.874 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/project] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.874 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/project/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.874 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/project/list'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.874 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/settings/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.874 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.874 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/settings/mail/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.874 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.874 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.874 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.874 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/settings/common'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.874 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/settings/theme'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.879 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/settings/mail'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.880 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/settings/qrcode'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.880 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/settings/profile'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.880 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/settings/profile/update'，请求方式：'[POST]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.880 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/settings/pay/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.880 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/upload'，请求方式：'[POST]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.880 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.880 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:07:36.880 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/upload/editorMD'，请求方式：'[POST]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:07:36.880 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 扫描资源完毕，共计处理资源数目：[108]，等待下一步插入数据库赋给网站管理员角色.. 
+11:07:36.937 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8089 (http) with context path '' 
+11:07:36.943 [restartedMain] INFO  m.w.n.NoteBlogV4Application - Started NoteBlogV4Application in 9.355 seconds (JVM running for 10.196) 
+11:07:36.946 [restartedMain] INFO  m.w.n.config.listener.InitListener - 「个人博客」App 正在准备，请稍后... 
+11:07:40.197 [restartedMain] INFO  m.w.n.config.listener.InitListener - 「个人博客」App 已经完成初始化，略过初始化步骤。 
+11:07:40.390 [restartedMain] INFO  m.w.n.config.listener.MenuListener - 「个人博客」App 初始化菜单完毕 
+11:07:40.393 [restartedMain] INFO  m.w.n.c.l.UploadFolderListener - 「个人博客」APP 文件上传路径设置为：[file:E://git_newportal_workspace//noteblogv4//upload/noteblogv4/] 
+11:07:40.393 [restartedMain] INFO  m.w.n.c.l.UploadFolderListener - 「个人博客」APP 已存在上传文件夹！ 
+11:07:40.397 [restartedMain] INFO  m.w.n.config.listener.FinalListener - 「个人博客」App 启动完毕（欢迎访问楠斯素材资源店）。 
+11:08:29.517 [http-nio-8089-exec-10] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet' 
+11:08:29.518 [http-nio-8089-exec-10] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started 
+11:08:29.560 [http-nio-8089-exec-10] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 42 ms 
+11:08:29.609 [http-nio-8089-exec-10] INFO  m.w.n.c.i.SessionInterceptor - [已登录用户] 
+11:08:29.633 [http-nio-8089-exec-10] INFO  m.w.n.c.permission.NBAuthAspect - 请求资源：[http://localhost:8089/management/index]，验证权限中，需要权限：[management:index:page]... 
+11:08:29.649 [http-nio-8089-exec-10] INFO  m.w.n.c.permission.NBAuthAspect - 验证权限通过，放行... 
+11:08:29.667 [http-nio-8089-exec-10] INFO  m.w.n.config.application.NBSession - update session for id:[23c9e048-d883-4cbe-9039-fce25a555623], at [2019-10-16T11:08:29.667] by url:[http://localhost:8089/management/index] with ip:[0:0:0:0:0:0:0:1] 
+11:08:30.267 [http-nio-8089-exec-4] INFO  m.w.n.c.i.SessionInterceptor - [已登录用户] 
+11:08:30.268 [http-nio-8089-exec-4] INFO  m.w.n.c.permission.NBAuthAspect - 请求资源：[http://localhost:8089/management/article]，验证权限中，需要权限：[management:article:list_page]... 
+11:08:30.276 [http-nio-8089-exec-4] INFO  m.w.n.c.permission.NBAuthAspect - 验证权限通过，放行... 
+11:08:30.284 [http-nio-8089-exec-4] INFO  m.w.n.config.application.NBSession - update session for id:[23c9e048-d883-4cbe-9039-fce25a555623], at [2019-10-16T11:08:30.284] by url:[http://localhost:8089/management/article] with ip:[0:0:0:0:0:0:0:1] 
+11:08:30.410 [http-nio-8089-exec-1] INFO  m.w.n.c.i.SessionInterceptor - [已登录用户] 
+11:08:30.441 [http-nio-8089-exec-1] INFO  m.w.n.c.permission.NBAuthAspect - 请求资源：[http://localhost:8089/management/article/list]，验证权限中，需要权限：[management:article:list_data]... 
+11:08:30.458 [http-nio-8089-exec-1] INFO  m.w.n.c.permission.NBAuthAspect - 验证权限通过，放行... 
+11:08:30.576 [http-nio-8089-exec-1] INFO  m.w.n.config.application.NBSession - update session for id:[23c9e048-d883-4cbe-9039-fce25a555623], at [2019-10-16T11:08:30.576] by url:[http://localhost:8089/management/article/list] with ip:[0:0:0:0:0:0:0:1] 
+11:08:34.025 [http-nio-8089-exec-10] INFO  m.w.n.c.i.SessionInterceptor - [已登录用户] 
+11:08:34.026 [http-nio-8089-exec-10] INFO  m.w.n.c.permission.NBAuthAspect - 请求资源：[http://localhost:8089/management/settings/profile]，验证权限中，需要权限：[management:settings:profile]... 
+11:08:34.034 [http-nio-8089-exec-10] INFO  m.w.n.c.permission.NBAuthAspect - 验证权限通过，放行... 
+11:08:34.041 [http-nio-8089-exec-10] INFO  m.w.n.config.application.NBSession - update session for id:[23c9e048-d883-4cbe-9039-fce25a555623], at [2019-10-16T11:08:34.041] by url:[http://localhost:8089/management/settings/profile] with ip:[0:0:0:0:0:0:0:1] 
+11:08:47.674 [http-nio-8089-exec-8] INFO  m.w.n.c.i.SessionInterceptor - [已登录用户] 
+11:08:47.675 [http-nio-8089-exec-8] INFO  m.w.n.c.permission.NBAuthAspect - 请求资源：[http://localhost:8089/management/logout]，验证权限中，需要权限：[user:logout:page]... 
+11:08:47.682 [http-nio-8089-exec-8] INFO  m.w.n.c.permission.NBAuthAspect - 验证权限通过，放行... 
+11:08:47.712 [http-nio-8089-exec-7] INFO  m.w.n.c.i.SessionInterceptor - [未登录用户] 
+11:08:47.777 [http-nio-8089-exec-2] INFO  m.w.n.web.KaptchaController - 输出验证码：[7917] 
+11:10:00.001 [pool-1-thread-1] INFO  m.w.n.c.a.SessionValidator - validate session in noteblog application task... 
+11:14:03.255 [http-nio-8089-exec-10] INFO  m.w.n.web.KaptchaController - 输出验证码：[7540] 
+11:20:00.002 [pool-1-thread-1] INFO  m.w.n.c.a.SessionValidator - validate session in noteblog application task... 
+11:30:00.002 [pool-1-thread-1] INFO  m.w.n.c.a.SessionValidator - validate session in noteblog application task... 
+11:30:43.659 [restartedMain] INFO  m.w.n.NoteBlogV4Application - Starting NoteBlogV4Application on Wangzejun with PID 18268 (E:\git_newportal_workspace\noteblogv4\target\classes started by wangzejun in E:\git_newportal_workspace\noteblogv4) 
+11:30:43.664 [restartedMain] INFO  m.w.n.NoteBlogV4Application - The following profiles are active: noteblogv4 
+11:30:43.735 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7b13f713: startup date [Wed Oct 16 11:30:43 CST 2019]; root of context hierarchy 
+11:30:44.927 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[me.wuwenbin.noteblogv4.dao.mapper]' package. Please check your configuration. 
+11:30:45.127 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[me.wuwenbin.noteblogv4]' package. Please check your configuration. 
+11:30:46.287 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$902bf9f5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+11:30:46.880 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default' 
+11:30:46.895 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+11:30:47.008 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final} 
+11:30:47.011 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found 
+11:30:47.062 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+11:30:47.433 [restartedMain] INFO  c.a.druid.pool.DruidDataSource - {dataSource-1} inited 
+11:30:47.678 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: me.wuwenbin.noteblogv4.config.configuration.LocalMySQL57InnoDBDialect 
+11:30:48.279 [restartedMain] WARN  org.hibernate.id.UUIDHexGenerator - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead 
+11:30:48.916 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+11:30:49.364 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory 
+11:30:50.113 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8089 (http) 
+11:30:50.157 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+11:30:50.159 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31 
+11:30:50.184 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_121\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk1.8.0_121/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_121/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_121/bin/../jre/lib/amd64;E:\Xsheel_6\Xsheel6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_121\bin;C:\Program Files\Java\jdk1.8.0_121\jre\bin;E:\maven\onlyformigu\apache-maven-3.3.9\bin;E:\Apache\mysql-5.7.21-winx64\bin;E:\oracle\product\10.2.0\db_1\bin;C:\ProgramData\Oracle\Java\javapath;F:\TortoiseSVN\bin;E:\Git\cmd;E:\git_workspace\DOCS\tools;;C:\WINDOWS\System32\OpenSSH\;C:\Users\JoashYe\AppData\Local\Microsoft\WindowsApps;;C:\Users\JoashYe\AppData\Local\Programs\Fiddler;E:\Fiddler;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;E:\eclipse;;.] 
+11:30:50.395 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+11:30:50.396 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6661 ms 
+11:30:50.693 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/] 
+11:30:50.695 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet statViewServlet mapped to [/druid/*] 
+11:30:50.701 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
+11:30:50.701 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+11:30:50.702 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+11:30:50.702 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
+11:30:50.702 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*] 
+11:30:52.050 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+11:30:52.428 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7b13f713: startup date [Wed Oct 16 11:30:43 CST 2019]; root of context hierarchy 
+11:30:52.436 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Detected @ModelAttribute methods in globalController 
+11:30:52.487 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+11:30:52.528 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/registration],methods=[POST]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.EntranceController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest) 
+11:30:52.530 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/qq]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.EntranceController.qqLogin(javax.servlet.http.HttpServletRequest) 
+11:30:52.530 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/qqCallback]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.EntranceController.qqCallback(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) 
+11:30:52.530 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/registration],methods=[GET]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.EntranceController.registration() 
+11:30:52.531 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[POST]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.EntranceController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,me.wuwenbin.noteblogv4.model.pojo.business.SimpleLoginData) 
+11:30:52.532 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[GET]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.EntranceController.login(javax.servlet.http.HttpServletRequest,java.lang.String) 
+11:30:52.532 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/logout],methods=[GET]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.EntranceController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String) 
+11:30:52.533 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/token/logout],methods=[GET]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.EntranceController.logout2(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String) 
+11:30:52.535 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[application/json || application/x-www-form-urlencoded || multipart/form-data]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.ErrorController.error(javax.servlet.http.HttpServletRequest) 
+11:30:52.535 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView me.wuwenbin.noteblogv4.web.ErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+11:30:52.537 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/file]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.frontend.CloudFileController.file(org.springframework.ui.Model,java.lang.Long) 
+11:30:52.538 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/file/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBCloudFile> me.wuwenbin.noteblogv4.web.frontend.CloudFileController.cateList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBCloudFile>,java.lang.Long,java.lang.String) 
+11:30:52.562 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/article/comments || /a/comments],methods=[POST]}" onto public org.springframework.data.domain.Page<me.wuwenbin.noteblogv4.model.entity.NBComment> me.wuwenbin.noteblogv4.web.frontend.content.ArticleController.comments(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBComment>,me.wuwenbin.noteblogv4.model.pojo.bo.CommentQueryBO) 
+11:30:52.563 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/article/{aId} || /a/{aId}]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.frontend.content.ArticleController.article(java.lang.Long,org.springframework.ui.Model,me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBComment>,me.wuwenbin.noteblogv4.model.pojo.bo.CommentQueryBO) 
+11:30:52.565 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/article/u/{urlSeq} || /a/u/{urlSeq}]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.frontend.content.ArticleController.articleByUrl(java.lang.String,org.springframework.ui.Model,me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBComment>,me.wuwenbin.noteblogv4.model.pojo.bo.CommentQueryBO) 
+11:30:52.567 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/article/approve || /a/approve],methods=[POST]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.frontend.content.ArticleController.approve(java.lang.Long) 
+11:30:52.569 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/token/comment/sub],methods=[POST]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.frontend.content.CommentController.sub(me.wuwenbin.noteblogv4.model.entity.NBComment,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest) 
+11:30:52.572 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/msg]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.frontend.content.MessageController.index(org.springframework.ui.Model,me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBMessage>,me.wuwenbin.noteblogv4.model.pojo.bo.MessageQueryBO) 
+11:30:52.574 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/msg/lists],methods=[POST]}" onto public org.springframework.data.domain.Page<me.wuwenbin.noteblogv4.model.entity.NBMessage> me.wuwenbin.noteblogv4.web.frontend.content.MessageController.comments(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBMessage>,me.wuwenbin.noteblogv4.model.pojo.bo.MessageQueryBO) 
+11:30:52.575 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/token/msg/sub],methods=[POST]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.frontend.content.MessageController.sub(me.wuwenbin.noteblogv4.model.entity.NBMessage,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest) 
+11:30:52.577 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/note],methods=[GET]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.frontend.content.NoteController.index(org.springframework.ui.Model) 
+11:30:52.578 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/note/next],methods=[POST]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.frontend.content.NoteController.next(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBNote>,java.lang.String,java.lang.String) 
+11:30:52.578 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[ || /index]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.frontend.IndexController.index(org.springframework.ui.Model) 
+11:30:52.579 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/next || /index/next]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.frontend.IndexController.nextPageArticle(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBArticle>,me.wuwenbin.noteblogv4.model.pojo.bo.ArticleQueryBO) 
+11:30:52.580 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/profile]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.frontend.ProfileController.profile(org.springframework.ui.Model) 
+11:30:52.581 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/project/next],methods=[POST]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.frontend.ProjectController.next(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBNote>,java.lang.Long) 
+11:30:52.582 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/project]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.frontend.ProjectController.project(org.springframework.ui.Model,me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBProject>,java.lang.Long) 
+11:30:52.587 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/tag/all],methods=[GET]}" onto public java.util.List<me.wuwenbin.noteblogv4.model.entity.NBTag> me.wuwenbin.noteblogv4.web.frontend.TagController.tagsList() 
+11:30:52.588 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/init]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.InitController.init() 
+11:30:52.588 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/font/list]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.InitController.b(javax.servlet.http.HttpServletRequest) 
+11:30:52.588 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/init/submit]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.InitController.initSubmit(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String) 
+11:30:52.590 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/image/code]}" onto public org.springframework.web.servlet.ModelAndView me.wuwenbin.noteblogv4.web.KaptchaController.kaptcha(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException 
+11:30:52.592 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/index]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.AdminIndexController.index(org.springframework.ui.Model) 
+11:30:52.592 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dashboard]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.AdminIndexController.dashboard(org.springframework.ui.Model) 
+11:30:52.593 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/role/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.addRole(me.wuwenbin.noteblogv4.model.entity.permission.NBSysRole,org.springframework.validation.BindingResult) 
+11:30:52.594 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/update/role/resource]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.updateRoleResource(java.lang.Long,java.lang.Long[]) 
+11:30:52.594 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.menuIndex(org.springframework.ui.Model,java.lang.Long) 
+11:30:52.594 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/role]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.roleRouter(org.springframework.ui.Model) 
+11:30:52.595 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/resource/tree]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.resourcesTree(java.lang.Long) 
+11:30:52.595 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.permission.NBSysMenu> me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.roleMenuList(java.lang.Long) 
+11:30:52.595 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu/add]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.addMenu(org.springframework.ui.Model,java.lang.Long,java.lang.String) 
+11:30:52.595 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu/edit]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.addMenu(org.springframework.ui.Model,java.lang.Long,java.lang.Long) 
+11:30:52.596 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/role/delete]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.deleteRole(java.lang.Long) 
+11:30:52.596 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.createMenu(me.wuwenbin.noteblogv4.model.entity.permission.NBSysMenu,org.springframework.validation.BindingResult) 
+11:30:52.596 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.modifyMenu(me.wuwenbin.noteblogv4.model.entity.permission.NBSysMenu,org.springframework.validation.BindingResult) 
+11:30:52.596 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/role/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.updateRole(me.wuwenbin.noteblogv4.model.entity.permission.NBSysRole,org.springframework.validation.BindingResult) 
+11:30:52.597 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu/delete]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.AuthorityController.deleteMenu(java.lang.Long) 
+11:30:52.598 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users/list],methods=[GET]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.permission.NBSysUser> me.wuwenbin.noteblogv4.web.management.authority.UserController.userList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.permission.NBSysUser>,me.wuwenbin.noteblogv4.model.entity.permission.NBSysUser) 
+11:30:52.599 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users/roles/id/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.UserController.userRolesIdUpdate(java.lang.Long,java.lang.String) 
+11:30:52.599 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users/roles/str/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.UserController.userRolesStrUpdate(java.lang.Long,java.lang.String) 
+11:30:52.599 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users/roles/list]}" onto public java.util.List<me.wuwenbin.noteblogv4.model.entity.permission.NBSysRole> me.wuwenbin.noteblogv4.web.management.authority.UserController.roleList(java.lang.Long) 
+11:30:52.599 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users/enable/update],methods=[POST]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.UserController.enableUpdate(java.lang.Long,java.lang.Boolean) 
+11:30:52.599 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.authority.UserController.usersListRouter() 
+11:30:52.601 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users/nickname/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.authority.UserController.nicknameUpdate(java.lang.Long,java.lang.String) 
+11:30:52.602 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile/add]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.CloudFileController.add(org.springframework.ui.Model) 
+11:30:52.603 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile/delete/{id}]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.CloudFileController.delete(java.lang.Long) 
+11:30:52.603 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile],methods=[GET]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.CloudFileController.list() 
+11:30:52.603 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.CloudFileController.projectCreate(me.wuwenbin.noteblogv4.model.entity.NBCloudFile,org.springframework.validation.BindingResult) 
+11:30:52.603 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile/list],methods=[GET]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBCloudFile> me.wuwenbin.noteblogv4.web.management.CloudFileController.cloudFileList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBCloudFile>) 
+11:30:52.603 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile/edit]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.CloudFileController.edit(org.springframework.ui.Model,java.lang.Long) 
+11:30:52.604 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.CloudFileController.projectUpdate(me.wuwenbin.noteblogv4.model.entity.NBCloudFile,org.springframework.validation.BindingResult) 
+11:30:52.605 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/delete/{id}]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.ArticleController.delete(java.lang.Long) 
+11:30:52.605 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/update/appreciable/{id}]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.ArticleController.appreciable(java.lang.Long,java.lang.Boolean) 
+11:30:52.605 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/update/top/{id}]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.ArticleController.top(java.lang.Long,java.lang.Boolean) 
+11:30:52.606 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/post]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.content.ArticleController.article(org.springframework.ui.Model) 
+11:30:52.606 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/edit/tags]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.ArticleController.editPageArticleTags(java.lang.Long) 
+11:30:52.606 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/list],methods=[GET]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBArticle> me.wuwenbin.noteblogv4.web.management.content.ArticleController.articleList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBArticle>,java.lang.String,java.lang.String) 
+11:30:52.606 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article],methods=[GET]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.content.ArticleController.articleList() 
+11:30:52.607 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.ArticleController.articleUpdate(me.wuwenbin.noteblogv4.model.entity.NBArticle,org.springframework.validation.BindingResult,java.lang.String,java.lang.String) 
+11:30:52.607 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/edit]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.content.ArticleController.edit(org.springframework.ui.Model,java.lang.Long) 
+11:30:52.607 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.ArticleController.articleCreate(me.wuwenbin.noteblogv4.model.entity.NBArticle,org.springframework.validation.BindingResult,java.lang.String,java.lang.String) 
+11:30:52.607 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/update/commented/{id}]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.ArticleController.commented(java.lang.Long,java.lang.Boolean) 
+11:30:52.609 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/delete/{id}]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.NoteController.delete(java.lang.Long) 
+11:30:52.610 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/update/top/{id}]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.NoteController.top(java.lang.Long,java.lang.Boolean) 
+11:30:52.611 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/edit]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.content.NoteController.edit(org.springframework.ui.Model,java.lang.Long) 
+11:30:52.613 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/edit/tags]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.NoteController.editPageNoteTags(java.lang.Long) 
+11:30:52.614 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.NoteController.noteCreate(me.wuwenbin.noteblogv4.model.entity.NBNote,org.springframework.validation.BindingResult,java.lang.String) 
+11:30:52.614 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note],methods=[GET]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.content.NoteController.noteList() 
+11:30:52.614 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/list],methods=[GET]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBNote> me.wuwenbin.noteblogv4.web.management.content.NoteController.noteList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBNote>,java.lang.String,java.lang.String) 
+11:30:52.616 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/post]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.content.NoteController.notePost() 
+11:30:52.616 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/update/show/{id}]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.NoteController.show(java.lang.Long,java.lang.Boolean) 
+11:30:52.616 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.content.NoteController.updateNote(me.wuwenbin.noteblogv4.model.entity.NBNote,org.springframework.validation.BindingResult,java.lang.String) 
+11:30:52.617 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cate/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminCateController.update(me.wuwenbin.noteblogv4.model.entity.NBCate,org.springframework.validation.BindingResult) 
+11:30:52.617 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cate/delete]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminCateController.delete(java.lang.Long) 
+11:30:52.620 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cate]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.dictionary.AdminCateController.cate() 
+11:30:52.624 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cate/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBCate> me.wuwenbin.noteblogv4.web.management.dictionary.AdminCateController.cateList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBCate>) 
+11:30:52.625 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cate/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminCateController.cateCreate(me.wuwenbin.noteblogv4.model.entity.NBCate) 
+11:30:52.626 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cloudFileCate/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminCloudFileCateController.update(me.wuwenbin.noteblogv4.model.entity.NBCloudFileCate,org.springframework.validation.BindingResult) 
+11:30:52.627 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cloudFileCate/delete]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminCloudFileCateController.delete(java.lang.Long) 
+11:30:52.627 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cloudFileCate]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.dictionary.AdminCloudFileCateController.cate() 
+11:30:52.629 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cloudFileCate/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBCloudFileCate> me.wuwenbin.noteblogv4.web.management.dictionary.AdminCloudFileCateController.cateList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBCloudFileCate>) 
+11:30:52.630 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cloudFileCate/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminCloudFileCateController.cateCreate(me.wuwenbin.noteblogv4.model.entity.NBCloudFileCate) 
+11:30:52.632 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/keyword/delete]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminKeywordController.delete(java.lang.Long) 
+11:30:52.633 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/keyword]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.dictionary.AdminKeywordController.cate() 
+11:30:52.633 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/keyword/update/enable]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminKeywordController.enableUpdate(me.wuwenbin.noteblogv4.model.entity.NBKeyword) 
+11:30:52.636 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/keyword/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBKeyword> me.wuwenbin.noteblogv4.web.management.dictionary.AdminKeywordController.keywordList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBKeyword>) 
+11:30:52.637 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/keyword/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminKeywordController.wordsUpdate(me.wuwenbin.noteblogv4.model.entity.NBKeyword,org.springframework.validation.BindingResult) 
+11:30:52.637 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/keyword/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminKeywordController.keywordCreate(me.wuwenbin.noteblogv4.model.entity.NBKeyword) 
+11:30:52.638 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/projectCate/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminProjectCateController.update(me.wuwenbin.noteblogv4.model.entity.NBProjectCate,org.springframework.validation.BindingResult) 
+11:30:52.639 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/projectCate/delete]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminProjectCateController.delete(java.lang.Long) 
+11:30:52.640 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/projectCate]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.dictionary.AdminProjectCateController.cate() 
+11:30:52.640 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/projectCate/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBProjectCate> me.wuwenbin.noteblogv4.web.management.dictionary.AdminProjectCateController.cateList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBProjectCate>) 
+11:30:52.640 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/projectCate/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminProjectCateController.cateCreate(me.wuwenbin.noteblogv4.model.entity.NBProjectCate) 
+11:30:52.641 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/tag/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminTagController.update(me.wuwenbin.noteblogv4.model.entity.NBTag,org.springframework.validation.BindingResult) 
+11:30:52.641 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/tag/delete]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.dictionary.AdminTagController.delete(java.lang.Long) 
+11:30:52.644 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/tag/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBTag> me.wuwenbin.noteblogv4.web.management.dictionary.AdminTagController.cateList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBTag>,java.lang.String) 
+11:30:52.644 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/tag]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.dictionary.AdminTagController.tagIndex() 
+11:30:52.645 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/comment/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.message.AdminCommentController.delete(java.lang.Long,boolean) 
+11:30:52.645 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/comment/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBComment> me.wuwenbin.noteblogv4.web.management.message.AdminCommentController.cateList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBComment>,java.lang.String) 
+11:30:52.645 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/comment]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.message.AdminCommentController.tagIndex() 
+11:30:52.648 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/message/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.message.AdminMessageController.delete(java.lang.Long,boolean) 
+11:30:52.648 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/message/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBMessage> me.wuwenbin.noteblogv4.web.management.message.AdminMessageController.cateList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBMessage>,java.lang.String) 
+11:30:52.650 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/message]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.message.AdminMessageController.tagIndex() 
+11:30:52.651 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.ProfileController.profile() 
+11:30:52.651 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile/delete]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.ProfileController.delete(java.lang.Long) 
+11:30:52.652 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile/edit]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.ProfileController.edit(org.springframework.ui.Model,java.lang.Long) 
+11:30:52.652 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.ProfileController.profileUpdate(me.wuwenbin.noteblogv4.model.entity.NBAbout,org.springframework.validation.BindingResult) 
+11:30:52.653 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile/list]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBAbout> me.wuwenbin.noteblogv4.web.management.ProfileController.aboutList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBAbout>) 
+11:30:52.653 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.ProfileController.aboutCreate(me.wuwenbin.noteblogv4.model.entity.NBAbout) 
+11:30:52.653 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile/add]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.ProfileController.notePost() 
+11:30:52.654 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project/add]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.ProjectController.add(org.springframework.ui.Model) 
+11:30:52.655 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project/delete/{id}]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.ProjectController.delete(java.lang.Long) 
+11:30:52.655 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project],methods=[GET]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.ProjectController.list() 
+11:30:52.655 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project/create]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.ProjectController.projectCreate(me.wuwenbin.noteblogv4.model.entity.NBProject,org.springframework.validation.BindingResult) 
+11:30:52.656 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project/edit]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.ProjectController.edit(org.springframework.ui.Model,java.lang.Long) 
+11:30:52.656 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.ProjectController.projectUpdate(me.wuwenbin.noteblogv4.model.entity.NBProject,org.springframework.validation.BindingResult) 
+11:30:52.656 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project/list],methods=[GET]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.LayuiTable<me.wuwenbin.noteblogv4.model.entity.NBProject> me.wuwenbin.noteblogv4.web.management.ProjectController.projectList(me.wuwenbin.noteblogv4.model.pojo.framework.Pagination<me.wuwenbin.noteblogv4.model.entity.NBProject>) 
+11:30:52.658 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.settings.SettingsController.update(java.lang.String,java.lang.String,java.lang.String) 
+11:30:52.659 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/mail/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.settings.SettingsController.updateMailConfig(javax.servlet.http.HttpServletRequest) 
+11:30:52.661 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/common]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.settings.SettingsController.settingsCommon(org.springframework.ui.Model) 
+11:30:52.661 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/theme]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.settings.SettingsController.settingTheme(org.springframework.ui.Model) 
+11:30:52.661 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/mail]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.settings.SettingsController.settingsMail(org.springframework.ui.Model) 
+11:30:52.662 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/profile/update],methods=[POST]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.settings.SettingsController.updateProfile(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) 
+11:30:52.662 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/profile]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.settings.SettingsController.settingsProfile(org.springframework.ui.Model,java.lang.String) 
+11:30:52.662 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/qrcode]}" onto public java.lang.String me.wuwenbin.noteblogv4.web.management.settings.SettingsController.settingsQrcode(org.springframework.ui.Model) 
+11:30:52.663 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/pay/update]}" onto public me.wuwenbin.noteblogv4.model.pojo.framework.NBR me.wuwenbin.noteblogv4.web.management.settings.SettingsController.updateQrcode(java.lang.String,java.lang.String,java.lang.String) 
+11:30:52.664 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/upload],methods=[POST]}" onto public java.lang.Object me.wuwenbin.noteblogv4.web.management.upload.UploadController.upload(javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartFile,java.lang.String) 
+11:30:52.665 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/upload/editorMD],methods=[POST]}" onto public java.lang.Object me.wuwenbin.noteblogv4.web.management.upload.UploadController.uploadEditorMD(org.springframework.web.multipart.MultipartFile) 
+11:30:52.709 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+11:30:52.709 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+11:30:52.710 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+11:30:52.710 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/upfiles/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+11:30:52.836 [restartedMain] WARN  o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead. 
+11:30:53.845 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+11:30:53.883 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup 
+11:30:53.885 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure 
+11:30:53.887 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'statFilter' has been autodetected for JMX exposure 
+11:30:53.894 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper] 
+11:30:53.896 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter] 
+11:30:53.910 [restartedMain] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing 
+11:30:53.920 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 「个人博客」APP 正在检测初始化状态，请稍后... 
+11:30:54.011 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 「个人博客」APP 已初始化，开始准备其它内容，请稍后... 
+11:30:54.011 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 「个人博客」App 正在启动中，请稍后... 
+11:30:54.015 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/registration] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.015 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/api/qq] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.016 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/api/qqCallback] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.016 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/registration] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.016 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/login] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.016 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/login] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.017 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/logout'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.020 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/token/logout] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.020 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.020 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.020 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.020 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.020 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.020 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.020 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.020 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/file] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.020 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/file/list] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.020 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/article/comments] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.020 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/article] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.020 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/article/{aId}] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.020 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/article/u/{urlSeq}] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.021 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/article/approve] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.021 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/article] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.021 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/article] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.021 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/article] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.021 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/a/comments] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.021 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/a] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.021 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/a/{aId}] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.021 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/a/u/{urlSeq}] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.021 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/a/approve] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.021 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/a] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.021 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/a] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.021 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/a] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.021 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/token/comment/sub] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.021 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/token/comment] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.021 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/token/comment] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.021 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/token/comment] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.022 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/token/comment] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.022 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/msg] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.022 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/msg/lists] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.022 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/token/msg/sub] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.022 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.022 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.022 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.022 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.022 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/note] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.022 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/note/next] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.022 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.022 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/index] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.022 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.023 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/next] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.023 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/index/next] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.023 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.023 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.023 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.023 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/profile] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.023 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/project/next] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.023 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/project] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.023 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/tag] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.023 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/init] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.024 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/font/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.024 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/init/submit] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.025 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/image/code] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.025 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/index'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.025 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dashboard'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.025 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/role/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.025 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/update/role/resource'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.026 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/menu'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.026 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/role'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.026 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/resource/tree'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.027 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/menu/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.028 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/menu/add'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.029 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/menu/edit'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.029 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/role/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.030 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/menu/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.030 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/menu/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.030 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/role/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.030 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/menu/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.030 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/users] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.030 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/users/list'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.030 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/users/roles/id/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.030 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/users/roles/str/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.031 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/users] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.031 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/users/roles/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.031 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/users/enable/update'，请求方式：'[POST]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.031 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/users'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.031 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/users/nickname/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.032 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/users] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.032 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/users] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.032 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/cloudFile/add'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.032 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/cloudFile/delete/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.032 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/cloudFile'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.032 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/cloudFile] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.032 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/cloudFile] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.032 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/cloudFile] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.033 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/cloudFile/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.033 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/cloudFile/list'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.033 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/cloudFile/edit'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.033 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/cloudFile/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.033 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/cloudFile] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.033 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/cloudFile] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.033 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/delete/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.033 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/update/appreciable/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.034 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/update/top/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.034 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.034 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/post'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.034 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/edit/tags'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.034 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.034 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.034 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/list'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.034 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.034 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.035 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.035 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.035 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/edit'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.035 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.035 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.035 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.035 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/article/update/commented/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.035 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note/delete/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.035 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note/update/top/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.036 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.036 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.036 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.036 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.036 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.036 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note/edit'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.037 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note/edit/tags'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.037 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.037 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.038 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note/list'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.038 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note/post'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.038 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.038 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.038 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note/update/show/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.038 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/note/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.038 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cate/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.039 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cate/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.039 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.039 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cate'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.039 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cate/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.039 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.039 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.039 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.039 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.040 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.040 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.040 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.040 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.040 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.040 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.040 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cate/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.040 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.040 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.040 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.040 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cloudFileCate/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.040 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cloudFileCate/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.040 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.041 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cloudFileCate'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.041 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cloudFileCate/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.041 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.041 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.041 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.041 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.041 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.041 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.041 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.041 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.041 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.042 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.042 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cloudFileCate/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.042 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.042 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.042 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.043 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/keyword/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.043 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.043 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/keyword'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.043 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.043 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.043 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.043 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.044 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/keyword/update/enable'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.044 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.044 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.044 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.044 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/keyword/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.044 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.044 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/keyword/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.044 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.045 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.045 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/keyword/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.045 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.045 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.046 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/projectCate/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.046 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/projectCate/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.046 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.047 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/projectCate'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.047 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/projectCate/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.048 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.049 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.049 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.049 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.049 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.049 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.049 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.049 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.049 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.049 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.049 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/projectCate/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.049 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.049 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.049 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/tag/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/tag/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/tag] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/tag/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/tag] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/tag] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/tag] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/dictionary/tag'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/tag] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/dictionary/tag] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/comment/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/comment] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/comment/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/comment'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/comment] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/message/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/message] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/message/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.050 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/message'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.051 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/message] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.051 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/profile'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.051 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/profile/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.051 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.051 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.051 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.051 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.051 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.051 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/profile/edit'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.051 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/profile/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.051 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.052 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.052 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.052 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.052 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/profile/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.052 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/profile/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.052 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/profile/add'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.053 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.053 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.053 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/project/add'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.053 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/project/delete/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.053 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/project'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.053 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/project] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.053 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/project] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.055 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/project] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.055 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/project/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.055 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/project/edit'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.056 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/project/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.056 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/project/list'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.056 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/project] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.056 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management/project] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.056 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/settings/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.056 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.056 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/settings/mail/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.056 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.056 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/settings/common'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.056 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/settings/theme'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.056 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/settings/mail'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.057 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/settings/profile/update'，请求方式：'[POST]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.057 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/settings/profile'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.057 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/settings/qrcode'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.057 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/settings/pay/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.057 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.057 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.057 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.057 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/upload'，请求方式：'[POST]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.057 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[url = '/management/upload/editorMD'，请求方式：'[POST]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+11:30:54.057 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+11:30:54.057 [restartedMain] INFO  m.w.n.c.listener.ResourceListener - 扫描资源完毕，共计处理资源数目：[108]，等待下一步插入数据库赋给网站管理员角色.. 
+11:30:54.110 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8089 (http) with context path '' 
+11:30:54.114 [restartedMain] INFO  m.w.n.NoteBlogV4Application - Started NoteBlogV4Application in 10.877 seconds (JVM running for 12.258) 
+11:30:54.118 [restartedMain] INFO  m.w.n.config.listener.InitListener - 「个人博客」App 正在准备，请稍后... 
+11:30:57.511 [restartedMain] INFO  m.w.n.config.listener.InitListener - 「个人博客」App 已经完成初始化，略过初始化步骤。 
+11:30:57.776 [restartedMain] INFO  m.w.n.config.listener.MenuListener - 「个人博客」App 初始化菜单完毕 
+11:30:57.781 [restartedMain] INFO  m.w.n.c.l.UploadFolderListener - 「个人博客」APP 文件上传路径设置为：[file:E://git_newportal_workspace//noteblogv4//upload/noteblogv4/] 
+11:30:57.781 [restartedMain] INFO  m.w.n.c.l.UploadFolderListener - 「个人博客」APP 已存在上传文件夹！ 
+11:30:57.786 [restartedMain] INFO  m.w.n.config.listener.FinalListener - 「个人博客」App 启动完毕（欢迎访问楠斯素材资源店）。 
+11:33:51.909 [http-nio-8089-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet' 
+11:33:51.910 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started 
+11:33:52.002 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 92 ms 
+11:34:50.453 [http-nio-8089-exec-9] INFO  m.w.n.web.KaptchaController - 输出验证码：[1971] 
+11:39:08.492 [http-nio-8089-exec-4] INFO  m.w.n.config.application.NBSession - 当前时间：2019-10-16T11:39:08.492，最后访问时间：2019-10-16T11:39:05.974，过期时间：2019-10-16T12:09:05.974，session 是否过期：false 
