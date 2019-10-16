@@ -23,7 +23,8 @@ import lombok.NoArgsConstructor;
 
 /**
  * created by Wuwenbin on 2018/7/14 at 10:37
- *
+ * @Id作用:该属性映射为数据库的主键列
+ * @GeneratedValue作用：用来标注组件的生成策略，采用数据库ID自增长的方式来自增主键字段
  * @author wuwenbin
  */
 @Data
