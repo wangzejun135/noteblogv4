@@ -20,9 +20,9 @@ public class SqlGenerator {
 
     public static void main(String[] args) {
         //实体类所在的package在磁盘上的绝对路径
-        String packageName = "D:/workspace/git-workspace/noteblogv4-master/src/main/java/me/wuwenbin/noteblogv4/model/entity";
+        String packageName = "E:/git_newportal_workspace/noteblogv4/src/main/java/me/wuwenbin/noteblogv4/model/entity";
         //生成sql的文件夹
-        String filePath = "D:/workspace/";
+        String filePath = "E:/git_newportal_workspace/";
         //项目中实体类的路径
         String prefix = "me.wuwenbin.noteblogv4.model.entity.";
         String className = "";
