@@ -1,10 +1,33 @@
 package me.wuwenbin.noteblogv4.service.content;
 
+import static cn.hutool.core.util.RandomUtil.randomInt;
+import static java.time.LocalDateTime.now;
+import static java.util.stream.Collectors.toList;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.criteria.Join;
+import javax.persistence.criteria.JoinType;
+import javax.persistence.criteria.Predicate;
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
+
+import com.github.pagehelper.util.StringUtil;
+
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.core.util.URLUtil;
 import cn.hutool.http.HtmlUtil;
-import com.github.pagehelper.util.StringUtil;
-import lombok.extern.slf4j.Slf4j;
 import me.wuwenbin.noteblogv4.dao.repository.ArticleRepository;
 import me.wuwenbin.noteblogv4.dao.repository.TagReferRepository;
 import me.wuwenbin.noteblogv4.dao.repository.TagRepository;
@@ -17,30 +40,12 @@ import me.wuwenbin.noteblogv4.model.entity.NBTagRefer;
 import me.wuwenbin.noteblogv4.model.pojo.bo.ArticleQueryBO;
 import me.wuwenbin.noteblogv4.service.param.ParamService;
 import me.wuwenbin.noteblogv4.util.NBUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.*;
-import org.springframework.data.jpa.domain.Specification;
-import org.springframework.stereotype.Service;
-import org.springframework.util.CollectionUtils;
-import org.springframework.util.StringUtils;
-
-import javax.persistence.criteria.Join;
-import javax.persistence.criteria.JoinType;
-import javax.persistence.criteria.Predicate;
-import javax.transaction.Transactional;
-import java.util.ArrayList;
-import java.util.List;
-
-import static cn.hutool.core.util.RandomUtil.randomInt;
-import static java.time.LocalDateTime.now;
-import static java.util.stream.Collectors.toList;
 
 /**
  * created by Wuwenbin on 2018/8/5 at 20:09
  *
  * @author wuwenbin
  */
-@Slf4j
 @Service
 public class ArticleServiceImpl implements ArticleService {
 

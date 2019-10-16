@@ -1,24 +1,9 @@
 package me.wuwenbin.noteblogv4.service.upload;
 
-import cn.hutool.core.util.IdUtil;
-import cn.hutool.core.util.StrUtil;
-import cn.hutool.json.JSONObject;
-import cn.hutool.json.JSONUtil;
-import com.qiniu.common.QiniuException;
-import com.qiniu.common.Zone;
-import com.qiniu.http.Response;
-import com.qiniu.storage.Configuration;
-import com.qiniu.storage.UploadManager;
-import com.qiniu.util.Auth;
-import lombok.extern.slf4j.Slf4j;
-import me.wuwenbin.noteblogv4.dao.repository.ParamRepository;
-import me.wuwenbin.noteblogv4.model.constant.LayUploader;
-import me.wuwenbin.noteblogv4.model.constant.NkUploader;
-import me.wuwenbin.noteblogv4.model.constant.NoteBlogV4;
-import me.wuwenbin.noteblogv4.model.constant.Upload;
-import me.wuwenbin.noteblogv4.model.entity.NBUpload;
-import me.wuwenbin.noteblogv4.model.pojo.framework.NBR;
-import me.wuwenbin.noteblogv4.web.BaseController;
+import java.time.LocalDateTime;
+import java.util.function.Consumer;
+
+import javax.transaction.Transactional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,9 +11,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.transaction.Transactional;
-import java.time.LocalDateTime;
-import java.util.function.Consumer;
+import com.qiniu.common.QiniuException;
+import com.qiniu.common.Zone;
+import com.qiniu.http.Response;
+import com.qiniu.storage.Configuration;
+import com.qiniu.storage.UploadManager;
+import com.qiniu.util.Auth;
+
+import cn.hutool.core.util.IdUtil;
+import cn.hutool.core.util.StrUtil;
+import cn.hutool.json.JSONObject;
+import cn.hutool.json.JSONUtil;
+import me.wuwenbin.noteblogv4.dao.repository.ParamRepository;
+import me.wuwenbin.noteblogv4.model.constant.LayUploader;
+import me.wuwenbin.noteblogv4.model.constant.NkUploader;
+import me.wuwenbin.noteblogv4.model.constant.NoteBlogV4;
+import me.wuwenbin.noteblogv4.model.constant.Upload;
+import me.wuwenbin.noteblogv4.model.entity.NBUpload;
+import me.wuwenbin.noteblogv4.model.pojo.framework.NBR;
 
 /**
  * 七牛文件上传Service
@@ -36,7 +36,7 @@ import java.util.function.Consumer;
  *
  * @author wuwenbin
  */
-@Slf4j
+@SuppressWarnings("deprecation")
 @Service("qiniuUpload")
 @Transactional(rollbackOn = Exception.class)
 public class QiniuUploadServiceImpl implements UploadService<Object> {

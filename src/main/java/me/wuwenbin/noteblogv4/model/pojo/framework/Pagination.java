@@ -14,6 +14,11 @@ import java.util.List;
 public class Pagination<T> extends PageOrder implements Serializable {
 
     /**
+     * 序列化
+     */
+    private static final long serialVersionUID = 1L;
+
+    /**
      * 当前页面编号，默认1
      */
     private int page = 1;
@@ -27,7 +32,7 @@ public class Pagination<T> extends PageOrder implements Serializable {
     /**
      * 当前页的数据集合List
      */
-    private List result = null;
+    private List<T> result = null;
 
 
     /**
@@ -166,7 +171,7 @@ public class Pagination<T> extends PageOrder implements Serializable {
      *
      * @return
      */
-    public List getRawResult() {
+    public List<T> getRawResult() {
         return result == null ? new ArrayList<>() : result;
     }
 
@@ -177,11 +182,11 @@ public class Pagination<T> extends PageOrder implements Serializable {
         this.result = result;
     }
 
-    public void setResult(List<?> result) {
+    public void setResult(List<T> result) {
         this.result = result;
     }
 
-    public void setRawResult(List result) {
+    public void setRawResult(List<T> result) {
         this.result = result;
     }
 

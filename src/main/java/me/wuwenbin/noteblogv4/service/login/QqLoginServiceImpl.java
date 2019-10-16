@@ -1,33 +1,30 @@
 package me.wuwenbin.noteblogv4.service.login;
 
-import cn.hutool.core.map.MapUtil;
-import cn.hutool.http.HttpUtil;
-import cn.hutool.json.JSONObject;
-import cn.hutool.json.JSONUtil;
-import lombok.extern.slf4j.Slf4j;
-import me.wuwenbin.noteblogv4.dao.repository.ParamRepository;
-import me.wuwenbin.noteblogv4.dao.repository.UserRepository;
-import me.wuwenbin.noteblogv4.model.constant.NoteBlogV4;
-import me.wuwenbin.noteblogv4.model.entity.permission.NBSysUser;
-import me.wuwenbin.noteblogv4.model.pojo.business.QqLoginModel;
-import me.wuwenbin.noteblogv4.model.pojo.framework.NBR;
-import me.wuwenbin.noteblogv4.service.upload.QiniuUploadServiceImpl;
+import static me.wuwenbin.noteblogv4.model.pojo.framework.NBR.error;
+import static me.wuwenbin.noteblogv4.model.pojo.framework.NBR.ok;
+
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Map;
-
-import static me.wuwenbin.noteblogv4.model.pojo.framework.NBR.error;
-import static me.wuwenbin.noteblogv4.model.pojo.framework.NBR.ok;
+import cn.hutool.core.map.MapUtil;
+import cn.hutool.http.HttpUtil;
+import cn.hutool.json.JSONObject;
+import cn.hutool.json.JSONUtil;
+import me.wuwenbin.noteblogv4.dao.repository.ParamRepository;
+import me.wuwenbin.noteblogv4.dao.repository.UserRepository;
+import me.wuwenbin.noteblogv4.model.constant.NoteBlogV4;
+import me.wuwenbin.noteblogv4.model.entity.permission.NBSysUser;
+import me.wuwenbin.noteblogv4.model.pojo.business.QqLoginModel;
+import me.wuwenbin.noteblogv4.model.pojo.framework.NBR;
 
 /**
  * created by Wuwenbin on 2018/1/23 at 12:33
  * @author wuwenbin
  */
-@Slf4j
 @Service
 public class QqLoginServiceImpl implements LoginService<QqLoginModel> {
     

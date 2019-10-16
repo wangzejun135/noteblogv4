@@ -1,16 +1,17 @@
 package me.wuwenbin.noteblogv4.web;
 
-import me.wuwenbin.noteblogv4.dao.repository.ParamRepository;
-import me.wuwenbin.noteblogv4.model.entity.NBParam;
-import me.wuwenbin.noteblogv4.util.CacheUtils;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+import me.wuwenbin.noteblogv4.dao.repository.ParamRepository;
+import me.wuwenbin.noteblogv4.model.entity.NBParam;
+import me.wuwenbin.noteblogv4.util.CacheUtils;
 
 /**
  * created by Wuwenbin on 2018/9/7 at 9:35
@@ -28,6 +29,7 @@ public class GlobalController {
         this.paramRepository = paramRepository;
     }
 
+    @SuppressWarnings("unchecked")
     @ModelAttribute
     public void addSettings(Model model) {
         //noinspection unchecked
