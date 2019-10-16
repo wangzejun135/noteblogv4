@@ -51,7 +51,6 @@ import sun.misc.BASE64Decoder;
  *
  * @author wuwenbin
  */
-@SuppressWarnings("restriction")
 @Component
 @Slf4j
 public class NBUtils implements ApplicationContextAware {
