@@ -1,16 +1,17 @@
 package me.wuwenbin.noteblogv4.model.entity.permission;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import me.wuwenbin.noteblogv4.model.entity.permission.pk.RoleResourceKey;
+import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.io.Serializable;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import me.wuwenbin.noteblogv4.model.entity.permission.pk.RoleResourceKey;
 
 /**
  * created by Wuwenbin on 2018/7/18 at 14:09
@@ -23,6 +24,11 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class NBSysRoleResource implements Serializable {
+
+    /**
+     * 序列化
+     */
+    private static final long serialVersionUID = 1L;
 
     @EmbeddedId
     private RoleResourceKey pk;

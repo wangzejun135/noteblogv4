@@ -1,13 +1,19 @@
 package me.wuwenbin.noteblogv4.model.entity;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
-import java.io.Serializable;
 
 /**
  * 关于我/网站的的数据库实体类
@@ -21,6 +27,11 @@ import java.io.Serializable;
 @Entity
 @Builder
 public class NBAbout implements Serializable {
+
+    /**
+     * 序列化
+     */
+    private static final long serialVersionUID = 1L;
 
     /**
      * 主键id

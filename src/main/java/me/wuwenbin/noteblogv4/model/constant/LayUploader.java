@@ -1,10 +1,10 @@
 package me.wuwenbin.noteblogv4.model.constant;
 
-import lombok.Data;
-
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
+
+import lombok.Data;
 
 /**
  * layui上传组件返回的json实体类 created by Wuwenbin on 2018/7/17 at 14:55
@@ -31,46 +31,6 @@ public class LayUploader implements Serializable
     private String imgSrc;
     
     private Map<String, Object> data = new HashMap<>();
-    
-    public int getCode()
-    {
-        return code;
-    }
-    
-    public String getMsg()
-    {
-        return msg;
-    }
-    
-    public String getImgSrc()
-    {
-        return imgSrc;
-    }
-    
-    public Map<String, Object> getData()
-    {
-        return data;
-    }
-    
-    public void setCode(int code)
-    {
-        this.code = code;
-    }
-    
-    public void setMsg(String msg)
-    {
-        this.msg = msg;
-    }
-    
-    public void setImgSrc(String imgSrc)
-    {
-        this.imgSrc = imgSrc;
-    }
-    
-    public void setData(Map<String, Object> data)
-    {
-        this.data = data;
-    }
     
     public LayUploader ok(String message, String imgSrc)
     {

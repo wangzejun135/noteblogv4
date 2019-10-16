@@ -1,11 +1,11 @@
 package me.wuwenbin.noteblogv4.model.pojo.business;
 
+import java.io.Serializable;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
 
 /**
  * created by Wuwenbin on 2019/1/2 at 16:57
@@ -16,10 +16,16 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class QqLoginModel implements Serializable {
-
+public class QqLoginModel implements Serializable
+{
+    
+    /**
+     * 序列化
+     */
+    private static final long serialVersionUID = 1L;
+    
     private String callbackDomain;
+    
     private String code;
-
-
+    
 }

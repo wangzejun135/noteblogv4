@@ -1,24 +1,27 @@
 package me.wuwenbin.noteblogv4;
 
-import com.qiniu.common.QiniuException;
-import com.qiniu.common.Zone;
-import com.qiniu.http.Response;
-import com.qiniu.storage.Configuration;
-import com.qiniu.storage.UploadManager;
-import com.qiniu.util.Auth;
-import me.wuwenbin.noteblogv4.dao.repository.CateRepository;
-import me.wuwenbin.noteblogv4.dao.repository.TagRepository;
-import me.wuwenbin.noteblogv4.model.entity.NBCate;
+import java.io.File;
+import java.util.UUID;
+
+import javax.transaction.Transactional;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.transaction.Transactional;
-import java.io.File;
-import java.util.UUID;
+import com.qiniu.common.QiniuException;
+import com.qiniu.common.Zone;
+import com.qiniu.http.Response;
+import com.qiniu.storage.Configuration;
+import com.qiniu.storage.UploadManager;
+import com.qiniu.util.Auth;
 
+import me.wuwenbin.noteblogv4.dao.repository.CateRepository;
+import me.wuwenbin.noteblogv4.model.entity.NBCate;
+
+@SuppressWarnings("deprecation")
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class NoteBlogV4ApplicationTests {
@@ -51,8 +54,8 @@ public class NoteBlogV4ApplicationTests {
         }
     }
 
-    @Autowired
-    private TagRepository tagRepository;
+/*    @Autowired
+    private TagRepository tagRepository;*/
 
     @Autowired
     private CateRepository cateRepository;
@@ -69,7 +72,7 @@ public class NoteBlogV4ApplicationTests {
     public void testTxJpa() {
         NBCate cate1 = NBCate.builder().cnName("1").name("1").build();
         cateRepository.save(cate1);
-        int s = 1 / 0;
+        //int s = 1 / 0;
         NBCate cate2 = NBCate.builder().cnName("2").name("2").build();
         cateRepository.save(cate2);
     }
@@ -77,10 +80,10 @@ public class NoteBlogV4ApplicationTests {
     @Test
 //    @Transactional
     public void testTxMybatis() {
-        String name1 = "1";
+        //String name1 = "1";
 //        tagMapper.save(name1);
-        int s = 1 / 0;
-        String name2 = "2";
+        //int s = 1 / 0;
+        //String name2 = "2";
 //        tagMapper.save(name2);
     }
 }

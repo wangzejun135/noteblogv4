@@ -1,9 +1,9 @@
 package me.wuwenbin.noteblogv4.model.pojo.bo;
 
+import java.io.Serializable;
+
 import lombok.Data;
 import lombok.ToString;
-
-import java.io.Serializable;
 
 /**
  * created by Wuwenbin on 2018/9/7 at 11:05
@@ -12,9 +12,18 @@ import java.io.Serializable;
  */
 @ToString
 @Data
-public class CommentQueryBO implements Serializable {
+public class CommentQueryBO implements Serializable
+{
+    /**
+     * 序列化
+     */
+    private static final long serialVersionUID = 1L;
+    
     private Long articleId;
+    
     private String clearComment;
+    
     private String ipCnAddr;
+    
     private Long userId;
 }

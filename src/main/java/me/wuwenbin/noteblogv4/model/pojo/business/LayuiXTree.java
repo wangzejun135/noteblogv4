@@ -1,11 +1,12 @@
 package me.wuwenbin.noteblogv4.model.pojo.business;
 
-import lombok.Data;
-import org.springframework.util.StringUtils;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.springframework.util.StringUtils;
+
+import lombok.Data;
 
 /**
  * layuiXtree树对象 created by Wuwenbin on 2018/7/23 at 16:55
@@ -34,76 +35,6 @@ public class LayuiXTree implements Serializable
     private Boolean disabled;
     
     private List<LayuiXTree> data = new ArrayList<>();
-    
-    public String getId()
-    {
-        return id;
-    }
-    
-    public String getTitle()
-    {
-        return title;
-    }
-    
-    public String getValue()
-    {
-        return value;
-    }
-    
-    public String getParentId()
-    {
-        return parentId;
-    }
-    
-    public Boolean getChecked()
-    {
-        return checked;
-    }
-    
-    public Boolean getDisabled()
-    {
-        return disabled;
-    }
-    
-    public List<LayuiXTree> getData()
-    {
-        return data;
-    }
-    
-    public void setId(String id)
-    {
-        this.id = id;
-    }
-    
-    public void setTitle(String title)
-    {
-        this.title = title;
-    }
-    
-    public void setValue(String value)
-    {
-        this.value = value;
-    }
-    
-    public void setParentId(String parentId)
-    {
-        this.parentId = parentId;
-    }
-    
-    public void setChecked(Boolean checked)
-    {
-        this.checked = checked;
-    }
-    
-    public void setDisabled(Boolean disabled)
-    {
-        this.disabled = disabled;
-    }
-    
-    public void setData(List<LayuiXTree> data)
-    {
-        this.data = data;
-    }
     
     public LayuiXTree(String title, String value, String id, boolean checked, boolean disabled)
     {

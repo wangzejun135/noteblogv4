@@ -1,11 +1,11 @@
 package me.wuwenbin.noteblogv4.model.pojo.business;
 
-import lombok.Data;
-import me.wuwenbin.noteblogv4.model.entity.permission.NBSysMenu;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import lombok.Data;
+import me.wuwenbin.noteblogv4.model.entity.permission.NBSysMenu;
 
 /**
  * created by Wuwenbin on 2018/7/31 at 15:05
@@ -32,66 +32,6 @@ public class MenuTree implements Serializable
     private String icon;
     
     private List<MenuTree> data;
-    
-    public Long getId()
-    {
-        return id;
-    }
-    
-    public Long getParentId()
-    {
-        return parentId;
-    }
-    
-    public String getUrl()
-    {
-        return url;
-    }
-    
-    public String getName()
-    {
-        return name;
-    }
-    
-    public String getIcon()
-    {
-        return icon;
-    }
-    
-    public List<MenuTree> getData()
-    {
-        return data;
-    }
-    
-    public void setId(Long id)
-    {
-        this.id = id;
-    }
-    
-    public void setParentId(Long parentId)
-    {
-        this.parentId = parentId;
-    }
-    
-    public void setUrl(String url)
-    {
-        this.url = url;
-    }
-    
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-    
-    public void setIcon(String icon)
-    {
-        this.icon = icon;
-    }
-    
-    public void setData(List<MenuTree> data)
-    {
-        this.data = data;
-    }
     
     public MenuTree(Long id, Long parentId, String url, String name, String icon)
     {

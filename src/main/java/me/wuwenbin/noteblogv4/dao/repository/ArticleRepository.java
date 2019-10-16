@@ -1,18 +1,23 @@
 package me.wuwenbin.noteblogv4.dao.repository;
 
-import me.wuwenbin.noteblogv4.model.entity.NBArticle;
+import java.util.List;
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
-import javax.transaction.Transactional;
-import java.util.List;
-import java.util.Optional;
+import me.wuwenbin.noteblogv4.model.entity.NBArticle;
 
 /**
  * created by Wuwenbin on 2018/7/15 at 12:52
  *
+ * @Transactional,只加上这个注解，默认是遇到运行时异常事务回滚
+ * rollbackOn = Exception.class,在上面基础上加上这个，遇到运行时异常和非运行时异常error都会将事务回滚
+ * @Modifying作用：通知jpa这是一个update或者delete操作，jpql不支持insert操作
  * @author wuwenbin
  */
 public interface ArticleRepository extends JpaRepository<NBArticle, Long>, JpaSpecificationExecutor<NBArticle> {

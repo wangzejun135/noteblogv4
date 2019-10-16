@@ -1,15 +1,27 @@
 package me.wuwenbin.noteblogv4.model.entity.permission;
 
+import java.io.Serializable;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 
 /**
  * created by Wuwenbin on 2018/7/20 at 21:23
@@ -24,6 +36,11 @@ import java.io.Serializable;
 @NoArgsConstructor
 @JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"})
 public class NBSysMenu implements Serializable {
+
+    /**
+     * 序列化
+     */
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -59,6 +76,8 @@ public class NBSysMenu implements Serializable {
     @OneToOne(cascade = CascadeType.DETACH)
     @JoinColumn(name = "resource_id")
     private NBSysResource resource;
+
+
 
     /**
      * 菜单类型
