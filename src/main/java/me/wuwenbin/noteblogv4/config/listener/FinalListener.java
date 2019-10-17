@@ -21,6 +21,6 @@ public class FinalListener implements ApplicationListener<ApplicationReadyEvent>
     @Override
     public void onApplicationEvent(ApplicationReadyEvent event)
     {
-        log.info("「个人博客」App 启动完毕（欢迎访问楠斯素材资源店）。");
+        log.info("「个人博客」App 启动完毕（欢迎访问惠风和畅个人博客系统）。");
     }
 }

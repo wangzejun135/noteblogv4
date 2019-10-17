@@ -108,7 +108,8 @@ import me.wuwenbin.noteblogv4.model.entity.permission.pk.RoleResourceKey;
 
 /**
  * spring boot 容器启动完成之后 创建完表之后，插入一些初始值 created by Wuwenbin on 2018/7/15 at 17:14
- *
+ * @Component作用：类似@Controller注解，为了容器启动时将对象实例到Spring容器中
+ * @Order(1)作用：设置该类在Spring容器中加载顺序
  * @author wuwenbin
  */
 @Slf4j
@@ -302,20 +303,25 @@ public class InitListener implements ApplicationListener<ApplicationReadyEvent>
      */
     private void setUpAppInitialSettings()
     {
+        // 二维数组包涵多个一维数组，并且个数和长度不固定
         String[][] settings = new String[][] {{ALL_COMMENT_OPEN, INIT_SURE, "是否全局开放评论", "10"},
             {MENU_NOTE_SHOW, INIT_SURE, "导航菜单_笔记是否显示，默认显示", "10"},
             {MENU_PROJECT_SHOW, INIT_NOT, "导航菜单_我的作品是否显示，默认不显示", "10"},
             {MENU_MINE_SHOW, INIT_SURE, "导航菜单_关于我是否显示，默认显示", "10"},
             {MENU_CLOUD_FILE_SHOW, INIT_SURE, "导航菜单_云文件是否显示，默认显示", "10"},
             {MENU_SEARCH_SHOW, INIT_SURE, "导航菜单_搜索是否显示，默认显示", "10"},
-            {MENU_LINK_SHOW, INIT_NOT, "是否显示额外的导航链接（譬如github）", "10"}, {APP_ID, StrUtil.EMPTY, "qq登录API的app_id", "9"},
-            {APP_KEY, StrUtil.EMPTY, "qq登录API的app_key", "9"}, {QQ_LOGIN, INIT_NOT, "是否开放qq登录", "10"},
-            {IS_SET_MASTER, INIT_NOT, "是否设置了网站管理员", "0"}, {IS_OPEN_MESSAGE, INIT_NOT, "是否开启留言功能", "10"},
+            {MENU_LINK_SHOW, INIT_NOT, "是否显示额外的导航链接（譬如github）", "10"}, 
+            {APP_ID, StrUtil.EMPTY, "qq登录API的app_id", "9"},
+            {APP_KEY, StrUtil.EMPTY, "qq登录API的app_key", "9"}, 
+            {QQ_LOGIN, INIT_NOT, "是否开放qq登录", "10"},
+            {IS_SET_MASTER, INIT_NOT, "是否设置了网站管理员", "0"},
+            {IS_OPEN_MESSAGE, INIT_NOT, "是否开启留言功能", "10"},
             {INFO_PANEL_ORDER, INIT_SURE, "网站信息和会员中心显示顺序，1表示网站信息显示在首要位置", "10"},
             {UPLOAD_TYPE, INIT_UPLOAD_TYPE, "上传方式类型，默认local，本地上传", "9"},
             {IS_OPEN_OSS_UPLOAD, INIT_NOT, "是否开启云服务器上传，默认0不开启", "9"},
             {QINIU_ACCESS_KEY, StrUtil.EMPTY, "七牛云AccessKey", "9"},
-            {QINIU_SECRET_KEY, StrUtil.EMPTY, "七牛云SecretKey", "9"}, {QINIU_BUCKET, StrUtil.EMPTY, "七牛云bucket", "9"},
+            {QINIU_SECRET_KEY, StrUtil.EMPTY, "七牛云SecretKey", "9"}, 
+            {QINIU_BUCKET, StrUtil.EMPTY, "七牛云bucket", "9"},
             {PAGE_MODERN, INIT_DEFAULT_PAGE_MODERN, "首页博文分页模式0：流式，1：按钮加载", "10"},
             {BLOG_STYLE, NoteBlogV4.ParamValue.STYLE_NORMAL, "首页样式，简约/普通（simple/normal）", "10"},
             {BLOG_INDEX_PAGE_SIZE, INIT_DEFAULT_PAGE_SIZE, "博客首页文章页面数据量大小，大于10才有效,否则则根据参数来判断", "-1"},
